@@ -23,6 +23,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <string.h>
+#include "sensors.h"
 #include "log.h"
 /* USER CODE END Includes */
 
@@ -73,8 +74,8 @@ void StartDefaultTask(void *argument);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 static void RunTasks(void) {
-	start_log_task();
-
+  start_log_task();
+  start_temperature_task();
 }
 /* USER CODE END 0 */
 

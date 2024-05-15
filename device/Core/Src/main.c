@@ -76,6 +76,8 @@ void StartDefaultTask(void *argument);
 static void RunTasks(void) {
   start_log_task();
   start_temperature_task();
+  start_humidity_task();
+  start_pressure_task();
 }
 /* USER CODE END 0 */
 

@@ -59,12 +59,13 @@ void MX_I2C4_Init(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define d2d_uart huart6
 #define DSI_RESET_Pin GPIO_PIN_15
 #define DSI_RESET_GPIO_Port GPIOJ
-#define RENDER_TIME_Pin GPIO_PIN_7
-#define RENDER_TIME_GPIO_Port GPIOC
-#define VSYNC_FREQ_Pin GPIO_PIN_6
-#define VSYNC_FREQ_GPIO_Port GPIOC
+#define D2D_RX_Pin GPIO_PIN_7
+#define D2D_RX_GPIO_Port GPIOC
+#define D2D_TX_Pin GPIO_PIN_6
+#define D2D_TX_GPIO_Port GPIOC
 #define MCU_ACTIVE_Pin GPIO_PIN_6
 #define MCU_ACTIVE_GPIO_Port GPIOF
 #define FRAME_RATE_Pin GPIO_PIN_1

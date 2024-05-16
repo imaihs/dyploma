@@ -11,7 +11,7 @@ static volatile uint32_t log_buffer_head = 0;
 static volatile uint32_t log_buffer_tail = 0;
 static volatile size_t log_buffer_size = 0;
 
-CREATE_TASK(log, osPriorityNormal, 512, log_task, NULL);
+CREATE_TASK(log, osPriorityNormal, 2048, log_task, NULL);
 CREATE_MUTEX(log_mutex);
 CREATE_SEMAPHORE(log_txcplt_sem, 1);
 
@@ -98,8 +98,8 @@ void LOG(const char *format, ...)
     va_list args;
     va_start(args, format);
 
-    char temp_buffer[LOG_BUFFER_SIZE];
-    int len = vsnprintf(temp_buffer, LOG_BUFFER_SIZE, format, args);
+    char temp_buffer[LOG_MAX_SIZE];
+    int len = vsnprintf(temp_buffer, LOG_MAX_SIZE, format, args);
 
     log_put(temp_buffer, len);
 

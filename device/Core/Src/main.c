@@ -25,6 +25,7 @@
 #include <string.h>
 #include "sensors.h"
 #include "log.h"
+#include "d2d.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -82,6 +83,7 @@ static void RunTasks(void) {
   start_temperature_task();
   start_humidity_task();
   start_pressure_task();
+  start_d2d_task();
 }
 /* USER CODE END 0 */
 

@@ -28,6 +28,7 @@
 #include "../mx25l512/mx25l512.h"
 #include "../otm8009a/otm8009a.h"
 #include "log.h"
+ #include "d2d.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -154,6 +155,7 @@ static uint8_t BSP_QSPI_EnableMemoryMappedMode(QSPI_HandleTypeDef *hqspi);
 /* USER CODE BEGIN 0 */
 static void RunTasks() {
   start_log_task();
+  start_d2d_task();
 }
 /* USER CODE END 0 */
 

@@ -55,6 +55,9 @@ volatile int diff = 0;
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+__weak void HAL_UART_RxIdleCallback(UART_HandleTypeDef *huart) {
+  (void)huart;
+}
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
@@ -276,6 +279,11 @@ void DMA2_Stream7_IRQHandler(void)
 void USART6_IRQHandler(void)
 {
   /* USER CODE BEGIN USART6_IRQn 0 */
+  extern UART_HandleTypeDef huart1;
+  if (__HAL_UART_GET_FLAG(&huart6, UART_FLAG_IDLE)) {
+    __HAL_UART_CLEAR_IDLEFLAG(&huart6);
+    HAL_UART_RxIdleCallback(&huart6);
+  }
 
   /* USER CODE END USART6_IRQn 0 */
   HAL_UART_IRQHandler(&huart6);

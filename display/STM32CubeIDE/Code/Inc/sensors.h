@@ -26,10 +26,4 @@ struct sensors
     struct pressure p;
 };
 
-void start_temperature_task(void);
-void start_humidity_task(void);
-void start_pressure_task(void);
-struct sensors get_sensors_data(void);
-void init_sensors_mutex(void);
-
 #endif // SENSORS_H

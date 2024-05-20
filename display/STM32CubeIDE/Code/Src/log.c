@@ -7,7 +7,7 @@
 #include "os.h"
 #include "ringbuf.h"
 
-CREATE_TASK(log, osPriorityNormal, 2048, log_task, NULL);
+CREATE_TASK(log, osPriorityHigh, 2048, log_task, NULL);
 CREATE_RINGBUF(log_ringbuf, LOG_BUFFER_SIZE);
 CREATE_SEMAPHORE(log_txcplt_sem, 1);
 
@@ -44,7 +44,7 @@ void LOG(const char *format, ...)
 
 static void log_task(void *argument)
 {
-    char buffer[LOG_BUFFER_SIZE + 1];
+    char buffer[LOG_MAX_SIZE + 1];
     size_t size;
     int err;
 
@@ -64,7 +64,7 @@ static void log_task(void *argument)
             osSemaphoreAcquire(log_txcplt_sem, osWaitForever);
             size = ringbuf_get_msg_size(&log_ringbuf);
         }
-        osDelay(5);
+        osDelay(1);
     }
 }
 

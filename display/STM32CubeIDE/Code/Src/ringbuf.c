@@ -105,7 +105,7 @@ int ringbuf_get(struct ringbuf *r, uint8_t *out_data, size_t *size)
         tmp_tail = r->buff;
     }
 
-    if (tmp_size < *size)
+    if (tmp_size <= *size)
     {
         for (size_t i = 0; i < tmp_size; i++)
         {
@@ -127,11 +127,7 @@ int ringbuf_get(struct ringbuf *r, uint8_t *out_data, size_t *size)
             }
         }
         out_data[bytes_read++] = *tmp_tail;
-        *tmp_tail++ = (uint8_t)(*size - tmp_size);
-        if (tmp_tail >= r->buff + r->size)
-        {
-            tmp_tail = r->buff;
-        }
+        *tmp_tail = (uint8_t)(tmp_size - *size);
     }
 
     r->is_full = 0;
@@ -140,4 +136,13 @@ int ringbuf_get(struct ringbuf *r, uint8_t *out_data, size_t *size)
     osMutexRelease(*r->mutex);
 
     return 0;
+}
+
+void ringbuf_clear(struct ringbuf *r)
+{
+    osMutexAcquire(*r->mutex, osWaitForever);
+    r->head = r->buff;
+    r->tail = r->buff;
+    r->is_full = 0;
+    osMutexRelease(*r->mutex);
 }

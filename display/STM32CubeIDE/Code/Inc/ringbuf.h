@@ -33,5 +33,6 @@ size_t ringbuf_get_size(struct ringbuf *r);
 size_t ringbuf_get_msg_size(struct ringbuf *r);
 int ringbuf_put(struct ringbuf *r, uint8_t *in_data, size_t size);
 int ringbuf_get(struct ringbuf *r, uint8_t *out_data, size_t *size);
+void ringbuf_clear(struct ringbuf *r);
 
 #endif // RINGBUF_H

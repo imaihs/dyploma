@@ -1,7 +1,7 @@
 #ifndef LOG_H
 #define LOG_H
 
-#define LOG_BUFFER_SIZE 512
+#define LOG_BUFFER_SIZE 1024
 #define LOG_MAX_SIZE 128
 
 void LOG(const char *format, ...);

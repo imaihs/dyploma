@@ -6,13 +6,28 @@
 #include "log.h"
 #include "os.h"
 
-CREATE_TASK(temperature, osPriorityNormal, 512, temperature_task, NULL);
-CREATE_TASK(humidity, osPriorityNormal, 512, humidity_task, NULL);
-CREATE_TASK(pressure, osPriorityNormal, 512, pressure_task, NULL);
+CREATE_TASK(temperature, osPriorityNormal, 1024, temperature_task, NULL);
+CREATE_TASK(humidity, osPriorityNormal, 1024, humidity_task, NULL);
+CREATE_TASK(pressure, osPriorityNormal, 1024, pressure_task, NULL);
+CREATE_MUTEX(sensors_mutex);
+
+static struct sensors sens;
 
 static struct temperature get_temperature(void);
 static struct humidity get_humidity(void);
 static struct pressure get_pressure(void);
+
+static void transmit_temperature(struct temperature t);
+static void transmit_humidity(struct humidity h);
+static void transmit_pressure(struct pressure p);
+
+struct sensors get_sensors_data(void)
+{
+  osMutexAcquire(sensors_mutex, osWaitForever);
+  struct sensors s = sens;
+  osMutexRelease(sensors_mutex);
+  return s;
+}
 
 static void temperature_task(void *argument)
 {
@@ -25,6 +40,7 @@ static void temperature_task(void *argument)
   for (;;)
   {
     t = get_temperature();
+    transmit_temperature(t);
     LOG("temperature is %d.%d", t.temp, t.temp_float);
     osDelay(1000);
   }
@@ -41,6 +57,7 @@ static void humidity_task(void *argument)
   for (;;)
   {
     h = get_humidity();
+    transmit_humidity(h);
     LOG("humidity is %d.%d", h.hum, h.hum_float);
     osDelay(1000);
   }
@@ -57,6 +74,7 @@ static void pressure_task(void *argument)
   for (;;)
   {
     p = get_pressure();
+    transmit_pressure(p);
     LOG("pressure is %d.%d", p.pres, p.pres_float);
     osDelay(1000);
   }
@@ -87,4 +105,25 @@ static struct pressure get_pressure(void)
   p.pres = (int)tmp;
   p.pres_float = (uint16_t)(tmp * 10) % 10;
   return p;
+}
+
+static void transmit_temperature(struct temperature t)
+{
+  osMutexAcquire(sensors_mutex, osWaitForever);
+  sens.t = t;
+  osMutexRelease(sensors_mutex);
+}
+
+static void transmit_humidity(struct humidity h)
+{
+  osMutexAcquire(sensors_mutex, osWaitForever);
+  sens.h = h;
+  osMutexRelease(sensors_mutex);
+}
+
+static void transmit_pressure(struct pressure p)
+{
+  osMutexAcquire(sensors_mutex, osWaitForever);
+  sens.p = p;
+  osMutexRelease(sensors_mutex);
 }

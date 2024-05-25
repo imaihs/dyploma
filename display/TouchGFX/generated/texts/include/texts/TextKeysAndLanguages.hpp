@@ -12,6 +12,7 @@ enum LANGUAGES
 
 enum TEXTS
 {
+    T_TIME,
     NUMBER_OF_TEXT_KEYS
 };
 

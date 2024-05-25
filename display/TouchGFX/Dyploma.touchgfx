@@ -3,11 +3,115 @@
     "Screens": [
       {
         "Name": "Screen1",
-        "Components": [],
+        "Components": [
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "topPanel1",
+            "Width": 800,
+            "Height": 75,
+            "CustomContainerDefinitionName": "topPanel"
+          }
+        ],
         "Interactions": []
       }
     ],
-    "CustomContainerDefinitions": [],
+    "CustomContainerDefinitions": [
+      {
+        "Name": "topPanel",
+        "Width": 800,
+        "Height": 75,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 800,
+            "Height": 75,
+            "Color": {
+              "Red": 30,
+              "Green": 30,
+              "Blue": 30
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "time",
+            "X": 22,
+            "Y": 13,
+            "Width": 18,
+            "Height": 49,
+            "TextId": "time",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true,
+            "Wildcard1": {},
+            "Wildcard2": {}
+          },
+          {
+            "Type": "Image",
+            "Name": "ok",
+            "X": 371,
+            "Y": 13,
+            "Width": 58,
+            "Height": 58,
+            "RelativeFilename": "ok_icon.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "warning",
+            "X": 370,
+            "Y": 8,
+            "Width": 60,
+            "Height": 59,
+            "Visible": false,
+            "RelativeFilename": "warning_icon.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "conn1",
+            "X": 740,
+            "Y": 16,
+            "Width": 41,
+            "Height": 43,
+            "Visible": false,
+            "RelativeFilename": "conn1_icon.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "conn2",
+            "X": 740,
+            "Y": 16,
+            "Width": 41,
+            "Height": 43,
+            "Visible": false,
+            "RelativeFilename": "conn2_icon.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "conn3",
+            "X": 740,
+            "Y": 16,
+            "Width": 41,
+            "Height": 43,
+            "Visible": false,
+            "RelativeFilename": "conn3_icon.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "conn4",
+            "X": 740,
+            "Y": 16,
+            "Width": 41,
+            "Height": 43,
+            "RelativeFilename": "conn4_icon.png"
+          }
+        ],
+        "Interactions": []
+      }
+    ],
     "Name": "Dyploma",
     "Resolution": {
       "Width": 800,

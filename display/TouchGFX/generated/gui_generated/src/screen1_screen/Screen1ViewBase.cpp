@@ -9,12 +9,6 @@ Screen1ViewBase::Screen1ViewBase()
     __background.setPosition(0, 0, 800, 480);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
-
-    flexButton1.setBoxWithBorderPosition(0, 0, 160, 160);
-    flexButton1.setBorderSize(5);
-    flexButton1.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(167, 0, 204), touchgfx::Color::getColorFromRGB(0, 17, 102), touchgfx::Color::getColorFromRGB(79, 25, 112));
-    flexButton1.setPosition(320, 160, 160, 160);
-    add(flexButton1);
 }
 
 Screen1ViewBase::~Screen1ViewBase()

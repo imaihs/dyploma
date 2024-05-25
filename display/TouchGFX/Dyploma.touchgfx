@@ -3,45 +3,7 @@
     "Screens": [
       {
         "Name": "Screen1",
-        "Components": [
-          {
-            "Type": "FlexButton",
-            "Name": "flexButton1",
-            "X": 320,
-            "Y": 160,
-            "Width": 160,
-            "Height": 160,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "Width": 160,
-                "Height": 160,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 5,
-                "ColorReleased": {
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Red": 167,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Green": 17,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 79,
-                  "Green": 25,
-                  "Blue": 112
-                }
-              }
-            ]
-          }
-        ],
+        "Components": [],
         "Interactions": []
       }
     ],

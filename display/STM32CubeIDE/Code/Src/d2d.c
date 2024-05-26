@@ -10,6 +10,12 @@ CREATE_TASK(d2d, osPriorityNormal, 2048, d2d_task, NULL);
 
 extern struct ringbuf serial_ringbuf;
 
+static struct sensors sensors_data;
+
+struct sensors sensors_get_data(void) {
+    return sensors_data;
+}
+
 static uint8_t d2d_calc_crc8(uint8_t *data, uint8_t size)
 {
     uint8_t crc = 0x5a;
@@ -24,10 +30,11 @@ static void d2d_proceed_pkt(uint8_t *data, size_t size)
 {
     if (size == sizeof(struct sensors))
     {
-        struct sensors *s = (struct sensors *)data;
-        LOG("temperature is %d.%d", s->t.temp, s->t.temp_float);
-        LOG("humidity is %d.%d", s->h.hum, s->h.hum_float);
-        LOG("pressure is %d.%d", s->p.pres, s->p.pres_float);
+        sensors_data = *((struct sensors *)data);
+        struct sensors s = sensors_data;
+        LOG("temperature is %d.%d", s.t.temp, s.t.temp_float);
+        LOG("humidity is %d.%d", s.h.hum, s.h.hum_float);
+        LOG("pressure is %d.%d", s.p.pres, s.p.pres_float);
     }
 }
 

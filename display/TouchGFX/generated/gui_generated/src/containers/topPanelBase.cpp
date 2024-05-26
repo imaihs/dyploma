@@ -14,9 +14,14 @@ topPanelBase::topPanelBase()
     box1.setColor(touchgfx::Color::getColorFromRGB(30, 30, 30));
     add(box1);
 
-    time.setXY(22, 13);
+    time.setXY(22, 20);
     time.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     time.setLinespacing(0);
+    touchgfx::Unicode::snprintf(timeBuffer1, TIMEBUFFER1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_H8KO).getText());
+    time.setWildcard1(timeBuffer1);
+    touchgfx::Unicode::snprintf(timeBuffer2, TIMEBUFFER2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_9M8N).getText());
+    time.setWildcard2(timeBuffer2);
+    time.resizeToCurrentText();
     time.setTypedText(touchgfx::TypedText(T_TIME));
     add(time);
 

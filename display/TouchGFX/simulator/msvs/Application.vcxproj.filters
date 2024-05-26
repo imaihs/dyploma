@@ -142,29 +142,17 @@
     <Filter Include="Source Files\gui\model">
       <UniqueIdentifier>314C10D3-AB66-6F6A-401C-E3F40B8EF760</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\gui\screen1_screen">
-      <UniqueIdentifier>5AB45FC3-CEF6-3CAD-554B-128D6E36AD4F</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\generated\gui_generated">
       <UniqueIdentifier>878C4FD0-D0CE-E371-AC8C-F625E532962F</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\gui\common">
       <UniqueIdentifier>D316E304-25B7-4B6B-4DB8-64330D63D631</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\screen1_screen">
-      <UniqueIdentifier>6CD97530-4E63-3347-308F-BE508BA15B93</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\generated\gui_generated">
       <UniqueIdentifier>8B4780CC-B594-5572-1CD7-301EF60EB16B</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\gui\common">
       <UniqueIdentifier>E8E9CBCF-5268-603E-82D5-620A15535D3C</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\generated\gui_generated\screen1_screen">
-      <UniqueIdentifier>EB9BC091-9F39-A318-E339-7A875889C505</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\generated\gui_generated\screen1_screen">
-      <UniqueIdentifier>253BF691-19C0-670A-0818-90C844D12882</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\generated\simulator\include">
       <UniqueIdentifier>AD99F879-DE2F-1CEC-35E4-363EE8EFCB2E</UniqueIdentifier>
@@ -196,6 +184,66 @@
     <Filter Include="Header Files\generated\gui_generated\containers">
       <UniqueIdentifier>68C211A2-F164-BFA2-311B-39D765942E05</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\gui\menuscreen_screen">
+      <UniqueIdentifier>570B287A-A6E8-1583-B85E-19D8591D244A</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\menuscreen_screen">
+      <UniqueIdentifier>566EDBF0-8690-7491-D58D-4534B90F0AD3</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\homescreen_screen">
+      <UniqueIdentifier>3E8410EC-0E15-64BA-2430-C26BA6CA6A16</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\homescreen_screen">
+      <UniqueIdentifier>EC7E6FAD-E7CE-FD4E-2941-25C888290738</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\homescreen_screen">
+      <UniqueIdentifier>083780FE-700F-9956-087D-4AF78115014F</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\homescreen_screen">
+      <UniqueIdentifier>F37DD84B-15C6-18BF-7722-F2B2BCFF7C2C</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\menuscreen_screen">
+      <UniqueIdentifier>0231BA2A-1C3D-D820-E9A5-BE2D1A8861D0</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\menuscreen_screen">
+      <UniqueIdentifier>AB445492-7371-8D12-9723-2C084A3361F8</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\sensorsscreen_screen">
+      <UniqueIdentifier>6629A5F0-C971-3248-7A55-EEA995BF12D6</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\sensorsscreen_screen">
+      <UniqueIdentifier>DC29C8FC-780C-AFA2-96E2-D5C55F78E407</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\eventsscreen_screen">
+      <UniqueIdentifier>6EA359CD-1B31-5E95-A743-F3B55BEBFACC</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\eventsscreen_screen">
+      <UniqueIdentifier>BFDD9E52-05CA-93A8-2C99-91516D58848C</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\settingsscreen_screen">
+      <UniqueIdentifier>5E945213-9F46-44FE-C4CA-9873B4310C9F</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\settingsscreen_screen">
+      <UniqueIdentifier>F77B0A8B-881C-6567-4CFB-306DA4609A87</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\settingsscreen_screen">
+      <UniqueIdentifier>D2FF01BF-8940-919E-4E37-C122EA4BA56E</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\sensorsscreen_screen">
+      <UniqueIdentifier>9B754046-3E58-996C-274E-7069925D73C9</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\sensorsscreen_screen">
+      <UniqueIdentifier>97116F2E-CAE5-404C-6681-F3C7FB8F9D9E</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\settingsscreen_screen">
+      <UniqueIdentifier>097819F6-B12C-7FC0-8E8C-D2A0714F4DF5</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\eventsscreen_screen">
+      <UniqueIdentifier>4FFE017A-615F-9BF2-CECD-FC86CAEE824B</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\eventsscreen_screen">
+      <UniqueIdentifier>1C3C999D-63BC-4B23-94AE-CDD3AC4B474A</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -225,15 +273,6 @@
     <ClCompile Include="..\..\gui\src\model\Model.cpp">
       <Filter>Source Files\gui\model</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\screen1_screen\Screen1Presenter.cpp">
-      <Filter>Source Files\gui\screen1_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\screen1_screen\Screen1View.cpp">
-      <Filter>Source Files\gui\screen1_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\screen1_screen\Screen1ViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\screen1_screen</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp">
       <Filter>Source Files\generated\simulator\video</Filter>
     </ClCompile>
@@ -242,6 +281,75 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\topPanelBase.cpp">
       <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\home.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\homeBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\homescreen_screen\HomeScreenPresenter.cpp">
+      <Filter>Source Files\gui\homescreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\homescreen_screen\HomeScreenView.cpp">
+      <Filter>Source Files\gui\homescreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\homescreen_screen\HomeScreenViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\homescreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\menuscreen_screen\MenuScreenPresenter.cpp">
+      <Filter>Source Files\gui\menuscreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\menuscreen_screen\MenuScreenView.cpp">
+      <Filter>Source Files\gui\menuscreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\menuscreen_screen\MenuScreenViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\menuscreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\events.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\eventsBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\sensors.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\sensorsBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\settings.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\settingsBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\eventsscreen_screen\EventsScreenPresenter.cpp">
+      <Filter>Source Files\gui\eventsscreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\eventsscreen_screen\EventsScreenView.cpp">
+      <Filter>Source Files\gui\eventsscreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\eventsscreen_screen\EventsScreenViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\eventsscreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\sensorsscreen_screen\SensorsScreenPresenter.cpp">
+      <Filter>Source Files\gui\sensorsscreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\sensorsscreen_screen\SensorsScreenView.cpp">
+      <Filter>Source Files\gui\sensorsscreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\sensorsscreen_screen\SensorsScreenViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\sensorsscreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\settingsscreen_screen\SettingsScreenPresenter.cpp">
+      <Filter>Source Files\gui\settingsscreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\settingsscreen_screen\SettingsScreenView.cpp">
+      <Filter>Source Files\gui\settingsscreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\settingsscreen_screen\SettingsScreenViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\settingsscreen_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -679,15 +787,6 @@
     <ClInclude Include="..\..\gui\include\gui\model\ModelListener.hpp">
       <Filter>Header Files\gui\model</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\screen1_screen\Screen1Presenter.hpp">
-      <Filter>Header Files\gui\screen1_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\screen1_screen\Screen1View.hpp">
-      <Filter>Header Files\gui\screen1_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen1_screen\Screen1ViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\screen1_screen</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\SimConstants.hpp">
       <Filter>Header Files\generated\gui_generated\common</Filter>
     </ClInclude>
@@ -699,6 +798,75 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\topPanelBase.hpp">
       <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\home.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\homeBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\homescreen_screen\HomeScreenPresenter.hpp">
+      <Filter>Header Files\gui\homescreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\homescreen_screen\HomeScreenView.hpp">
+      <Filter>Header Files\gui\homescreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\homescreen_screen\HomeScreenViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\homescreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\menuscreen_screen\MenuScreenPresenter.hpp">
+      <Filter>Header Files\gui\menuscreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\menuscreen_screen\MenuScreenView.hpp">
+      <Filter>Header Files\gui\menuscreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\menuscreen_screen\MenuScreenViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\menuscreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\events.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\eventsBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\sensors.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\sensorsBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\settings.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\settingsBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\eventsscreen_screen\EventsScreenPresenter.hpp">
+      <Filter>Header Files\gui\eventsscreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\eventsscreen_screen\EventsScreenView.hpp">
+      <Filter>Header Files\gui\eventsscreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\eventsscreen_screen\EventsScreenViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\eventsscreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\sensorsscreen_screen\SensorsScreenPresenter.hpp">
+      <Filter>Header Files\gui\sensorsscreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\sensorsscreen_screen\SensorsScreenView.hpp">
+      <Filter>Header Files\gui\sensorsscreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\sensorsscreen_screen\SensorsScreenViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\sensorsscreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\settingsscreen_screen\SettingsScreenPresenter.hpp">
+      <Filter>Header Files\gui\settingsscreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\settingsscreen_screen\SettingsScreenView.hpp">
+      <Filter>Header Files\gui\settingsscreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\settingsscreen_screen\SettingsScreenViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\settingsscreen_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -6,14 +6,59 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
-      <Text Id="time" Alignment="Left" TypographyId="Large">
+      <Text Id="__SingleUse_9M8N" Alignment="Left" TypographyId="InterSemiBold_48">
+        <Translation Language="GB">24</Translation>
+      </Text>
+      <Text Id="__SingleUse_H8KO" Alignment="Left" TypographyId="InterSemiBold_48">
+        <Translation Language="GB">20</Translation>
+      </Text>
+      <Text Id="__SingleUse_35RA" Alignment="Left" TypographyId="InterSemiBold_48">
+        <Translation Language="GB">9</Translation>
+      </Text>
+      <Text Id="__SingleUse_0X01" Alignment="Left" TypographyId="InterSemiBold_48">
+        <Translation Language="GB">1057</Translation>
+      </Text>
+      <Text Id="__SingleUse_0K24" Alignment="Left" TypographyId="InterSemiBold_48">
+        <Translation Language="GB">8</Translation>
+      </Text>
+      <Text Id="__SingleUse_DIGX" Alignment="Left" TypographyId="InterSemiBold_48">
+        <Translation Language="GB">46</Translation>
+      </Text>
+      <Text Id="__SingleUse_24RJ" Alignment="Left" TypographyId="InterSemiBold_48">
+        <Translation Language="GB">3</Translation>
+      </Text>
+      <Text Id="__SingleUse_3YWQ" Alignment="Left" TypographyId="InterSemiBold_48">
+        <Translation Language="GB">21</Translation>
+      </Text>
+      <Text Id="pressure" Alignment="Left" TypographyId="InterSemiBold_48">
+        <Translation Language="GB">&lt;pres&gt;.&lt;pres_float&gt; hPa</Translation>
+      </Text>
+      <Text Id="humidity" Alignment="Left" TypographyId="InterSemiBold_48">
+        <Translation Language="GB">&lt;hum&gt;.&lt;hum_float&gt; %</Translation>
+      </Text>
+      <Text Id="temperature" Alignment="Left" TypographyId="InterSemiBold_48">
+        <Translation Language="GB">&lt;temp&gt;.&lt;temp_float&gt; °C</Translation>
+      </Text>
+      <Text Id="settings" Alignment="Left" TypographyId="InterSemiBold_28">
+        <Translation Language="GB">Settings</Translation>
+      </Text>
+      <Text Id="events" Alignment="Left" TypographyId="InterSemiBold_28">
+        <Translation Language="GB">Events</Translation>
+      </Text>
+      <Text Id="sensors" Alignment="Left" TypographyId="InterSemiBold_28">
+        <Translation Language="GB">Sensors</Translation>
+      </Text>
+      <Text Id="home" Alignment="Left" TypographyId="InterSemiBold_28">
+        <Translation Language="GB">Home</Translation>
+      </Text>
+      <Text Id="time" Alignment="Left" TypographyId="InterSemiBold_28">
         <Translation Language="GB">&lt;hours&gt;:&lt;minutes&gt;</Translation>
       </Text>
     </TextGroup>
   </Texts>
   <Typographies>
-    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="InterSemiBold_28" Font="inter_SemiBold.ttf" Size="28" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="InterSemiBold_48" Font="inter_SemiBold.ttf" Size="48" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="InterSemiBold_150" Font="inter_SemiBold.ttf" Size="150" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
   </Typographies>
 </TextDatabase>

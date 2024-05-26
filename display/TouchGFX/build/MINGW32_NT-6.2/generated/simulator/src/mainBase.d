@@ -71,17 +71,33 @@ build/MINGW32_NT-6.2/generated/simulator/src/mainBase.o: \
  ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp \
  gui/include/gui/model/Model.hpp \
- gui/include/gui/screen1_screen/Screen1View.hpp \
- generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp \
+ gui/include/gui/menuscreen_screen/MenuScreenView.hpp \
+ generated/gui_generated/include/gui_generated/menuscreen_screen/MenuScreenViewBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
- gui/include/gui/screen1_screen/Screen1Presenter.hpp \
+ gui/include/gui/menuscreen_screen/MenuScreenPresenter.hpp \
  gui/include/gui/model/ModelListener.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
+ gui/include/gui/containers/topPanel.hpp \
+ generated/gui_generated/include/gui_generated/containers/topPanelBase.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
+ gui/include/gui/containers/home.hpp \
+ generated/gui_generated/include/gui_generated/containers/homeBase.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp \
+ gui/include/gui/containers/sensors.hpp \
+ generated/gui_generated/include/gui_generated/containers/sensorsBase.hpp \
+ gui/include/gui/containers/events.hpp \
+ generated/gui_generated/include/gui_generated/containers/eventsBase.hpp \
+ gui/include/gui/containers/settings.hpp \
+ generated/gui_generated/include/gui_generated/containers/settingsBase.hpp \
+ gui/include/gui/homescreen_screen/HomeScreenView.hpp \
+ generated/gui_generated/include/gui_generated/homescreen_screen/HomeScreenViewBase.hpp \
+ gui/include/gui/homescreen_screen/HomeScreenPresenter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AnimatedImageButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AnimatedImage.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp \
@@ -89,14 +105,21 @@ build/MINGW32_NT-6.2/generated/simulator/src/mainBase.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/RepeatButtonTrigger.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TiledImageButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ToggleButtonTrigger.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
+ gui/include/gui/sensorsscreen_screen/SensorsScreenView.hpp \
+ generated/gui_generated/include/gui_generated/sensorsscreen_screen/SensorsScreenViewBase.hpp \
+ gui/include/gui/sensorsscreen_screen/SensorsScreenPresenter.hpp \
+ gui/include/gui/eventsscreen_screen/EventsScreenView.hpp \
+ generated/gui_generated/include/gui_generated/eventsscreen_screen/EventsScreenViewBase.hpp \
+ gui/include/gui/eventsscreen_screen/EventsScreenPresenter.hpp \
+ gui/include/gui/settingsscreen_screen/SettingsScreenView.hpp \
+ generated/gui_generated/include/gui_generated/settingsscreen_screen/SettingsScreenViewBase.hpp \
+ gui/include/gui/settingsscreen_screen/SettingsScreenPresenter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp \
  generated/simulator/include/simulator/video/DirectFrameBufferVideoController.hpp \
@@ -272,17 +295,51 @@ generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp
 
 gui/include/gui/model/Model.hpp:
 
-gui/include/gui/screen1_screen/Screen1View.hpp:
+gui/include/gui/menuscreen_screen/MenuScreenView.hpp:
 
-generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp:
+generated/gui_generated/include/gui_generated/menuscreen_screen/MenuScreenViewBase.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 
-gui/include/gui/screen1_screen/Screen1Presenter.hpp:
+gui/include/gui/menuscreen_screen/MenuScreenPresenter.hpp:
 
 gui/include/gui/model/ModelListener.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
+
+gui/include/gui/containers/topPanel.hpp:
+
+generated/gui_generated/include/gui_generated/containers/topPanelBase.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
+
+gui/include/gui/containers/home.hpp:
+
+generated/gui_generated/include/gui_generated/containers/homeBase.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp:
+
+gui/include/gui/containers/sensors.hpp:
+
+generated/gui_generated/include/gui_generated/containers/sensorsBase.hpp:
+
+gui/include/gui/containers/events.hpp:
+
+generated/gui_generated/include/gui_generated/containers/eventsBase.hpp:
+
+gui/include/gui/containers/settings.hpp:
+
+generated/gui_generated/include/gui_generated/containers/settingsBase.hpp:
+
+gui/include/gui/homescreen_screen/HomeScreenView.hpp:
+
+generated/gui_generated/include/gui_generated/homescreen_screen/HomeScreenViewBase.hpp:
+
+gui/include/gui/homescreen_screen/HomeScreenPresenter.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp:
 
@@ -291,8 +348,6 @@ gui/include/gui/model/ModelListener.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AnimatedImage.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:
 
@@ -308,8 +363,6 @@ gui/include/gui/model/ModelListener.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:
 
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
-
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TiledImageButtonStyle.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp:
@@ -320,9 +373,25 @@ gui/include/gui/model/ModelListener.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp:
 
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
-
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
+
+gui/include/gui/sensorsscreen_screen/SensorsScreenView.hpp:
+
+generated/gui_generated/include/gui_generated/sensorsscreen_screen/SensorsScreenViewBase.hpp:
+
+gui/include/gui/sensorsscreen_screen/SensorsScreenPresenter.hpp:
+
+gui/include/gui/eventsscreen_screen/EventsScreenView.hpp:
+
+generated/gui_generated/include/gui_generated/eventsscreen_screen/EventsScreenViewBase.hpp:
+
+gui/include/gui/eventsscreen_screen/EventsScreenPresenter.hpp:
+
+gui/include/gui/settingsscreen_screen/SettingsScreenView.hpp:
+
+generated/gui_generated/include/gui_generated/settingsscreen_screen/SettingsScreenViewBase.hpp:
+
+gui/include/gui/settingsscreen_screen/SettingsScreenPresenter.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:
 

@@ -12,8 +12,16 @@
 #include <gui/common/FrontendApplication.hpp>
 #include <gui/model/Model.hpp>
 
-#include <gui/screen1_screen/Screen1View.hpp>
-#include <gui/screen1_screen/Screen1Presenter.hpp>
+#include <gui/menuscreen_screen/MenuScreenView.hpp>
+#include <gui/menuscreen_screen/MenuScreenPresenter.hpp>
+#include <gui/homescreen_screen/HomeScreenView.hpp>
+#include <gui/homescreen_screen/HomeScreenPresenter.hpp>
+#include <gui/sensorsscreen_screen/SensorsScreenView.hpp>
+#include <gui/sensorsscreen_screen/SensorsScreenPresenter.hpp>
+#include <gui/eventsscreen_screen/EventsScreenView.hpp>
+#include <gui/eventsscreen_screen/EventsScreenPresenter.hpp>
+#include <gui/settingsscreen_screen/SettingsScreenView.hpp>
+#include <gui/settingsscreen_screen/SettingsScreenPresenter.hpp>
 
 
 /**
@@ -36,8 +44,12 @@ public:
      * A list of all view types. Must end with meta::Nil.
      * @note All view types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< Screen1View,
-            touchgfx::meta::Nil
+    typedef touchgfx::meta::TypeList< MenuScreenView,
+            touchgfx::meta::TypeList< HomeScreenView,
+            touchgfx::meta::TypeList< SensorsScreenView,
+            touchgfx::meta::TypeList< EventsScreenView,
+            touchgfx::meta::TypeList< SettingsScreenView,
+            touchgfx::meta::Nil > > > >
             > GeneratedViewTypes;
 
     /**
@@ -49,8 +61,12 @@ public:
      * A list of all presenter types. Must end with meta::Nil.
      * @note All presenter types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< Screen1Presenter,
-            touchgfx::meta::Nil
+    typedef touchgfx::meta::TypeList< MenuScreenPresenter,
+            touchgfx::meta::TypeList< HomeScreenPresenter,
+            touchgfx::meta::TypeList< SensorsScreenPresenter,
+            touchgfx::meta::TypeList< EventsScreenPresenter,
+            touchgfx::meta::TypeList< SettingsScreenPresenter,
+            touchgfx::meta::Nil > > > >
             > GeneratedPresenterTypes;
 
     /**
@@ -73,7 +89,7 @@ public:
 
     virtual void gotoStartScreen(FrontendApplication& app)
     {
-        app.gotoScreen1ScreenNoTransition();
+        app.gotoMenuScreenScreenNoTransition();
     }
 protected:
     FrontendHeapBase(touchgfx::AbstractPartition& presenters, touchgfx::AbstractPartition& views, touchgfx::AbstractPartition& transitions, FrontendApplication& app)

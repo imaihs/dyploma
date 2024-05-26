@@ -2,8 +2,269 @@
   "Application": {
     "Screens": [
       {
-        "Name": "Screen1",
+        "Name": "MenuScreen",
         "Components": [
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "topPanel1",
+            "Width": 800,
+            "Height": 75,
+            "CustomContainerDefinitionName": "topPanel"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "homeButton",
+            "X": 75,
+            "Y": 160,
+            "Width": 300,
+            "Height": 80,
+            "CustomContainerDefinitionName": "home",
+            "Clickable": true
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "sensorsButton",
+            "X": 425,
+            "Y": 160,
+            "Width": 300,
+            "Height": 80,
+            "CustomContainerDefinitionName": "sensors",
+            "Clickable": true
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "eventsButton",
+            "X": 75,
+            "Y": 280,
+            "Width": 300,
+            "Height": 80,
+            "CustomContainerDefinitionName": "events",
+            "Clickable": true
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "settingsButton",
+            "X": 425,
+            "Y": 280,
+            "Width": 300,
+            "Height": 80,
+            "CustomContainerDefinitionName": "settings",
+            "Clickable": true
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "HomeScreen",
+        "Components": [
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "topPanel1",
+            "Width": 800,
+            "Height": 75,
+            "CustomContainerDefinitionName": "topPanel"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "goBack",
+            "X": 25,
+            "Y": 223,
+            "Width": 50,
+            "Height": 35,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "back_icon.png",
+                "ImagePressed": "back_icon.png"
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "GoBackInteraction",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "goBack"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "MenuScreen"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "SensorsScreen",
+        "Components": [
+          {
+            "Type": "FlexButton",
+            "Name": "goBack",
+            "X": 25,
+            "Y": 223,
+            "Width": 50,
+            "Height": 35,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "back_icon.png",
+                "ImagePressed": "back_icon.png"
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "topPanel1",
+            "Width": 800,
+            "Height": 75,
+            "CustomContainerDefinitionName": "topPanel"
+          },
+          {
+            "Type": "Image",
+            "Name": "presIcon",
+            "X": 255,
+            "Y": 340,
+            "Width": 73,
+            "Height": 73,
+            "RelativeFilename": "pressure_icon.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "humIcon",
+            "X": 264,
+            "Y": 240,
+            "Width": 54,
+            "Height": 73,
+            "RelativeFilename": "humidity_icon.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "tempIcon",
+            "X": 259,
+            "Y": 140,
+            "Width": 65,
+            "Height": 69,
+            "RelativeFilename": "temperature_icon.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "presText",
+            "X": 400,
+            "Y": 347,
+            "Width": 300,
+            "Height": 58,
+            "TextId": "pressure",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_0X01",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Wildcard2": {
+              "TextId": "__SingleUse_35RA",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "humText",
+            "X": 400,
+            "Y": 247,
+            "Width": 300,
+            "Height": 58,
+            "TextId": "humidity",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_DIGX",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Wildcard2": {
+              "TextId": "__SingleUse_0K24",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tempText",
+            "X": 400,
+            "Y": 145,
+            "Width": 300,
+            "Height": 58,
+            "TextId": "temperature",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_3YWQ",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Wildcard2": {
+              "TextId": "__SingleUse_24RJ",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "GoBackInteraction",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "goBack"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "MenuScreen"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "EventsScreen",
+        "Components": [
+          {
+            "Type": "FlexButton",
+            "Name": "goBack",
+            "X": 25,
+            "Y": 223,
+            "Width": 50,
+            "Height": 35,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "back_icon.png",
+                "ImagePressed": "back_icon.png"
+              }
+            ]
+          },
           {
             "Type": "CustomContainerInstance",
             "Name": "topPanel1",
@@ -12,7 +273,64 @@
             "CustomContainerDefinitionName": "topPanel"
           }
         ],
-        "Interactions": []
+        "Interactions": [
+          {
+            "InteractionName": "GoBackInteraction",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "goBack"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "MenuScreen"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "SettingsScreen",
+        "Components": [
+          {
+            "Type": "FlexButton",
+            "Name": "goBack",
+            "X": 25,
+            "Y": 223,
+            "Width": 50,
+            "Height": 35,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "back_icon.png",
+                "ImagePressed": "back_icon.png"
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "topPanel1",
+            "Width": 800,
+            "Height": 75,
+            "CustomContainerDefinitionName": "topPanel"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "GoBackInteraction",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "goBack"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "MenuScreen"
+            }
+          }
+        ]
       }
     ],
     "CustomContainerDefinitions": [
@@ -36,9 +354,9 @@
             "Type": "TextArea",
             "Name": "time",
             "X": 22,
-            "Y": 13,
-            "Width": 18,
-            "Height": 49,
+            "Y": 20,
+            "Width": 80,
+            "Height": 34,
             "TextId": "time",
             "TextRotation": "0",
             "Color": {
@@ -47,8 +365,16 @@
               "Blue": 255
             },
             "AutoSize": true,
-            "Wildcard1": {},
-            "Wildcard2": {}
+            "Wildcard1": {
+              "TextId": "__SingleUse_H8KO",
+              "UseBuffer": true,
+              "BufferSize": 4
+            },
+            "Wildcard2": {
+              "TextId": "__SingleUse_9M8N",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
           },
           {
             "Type": "Image",
@@ -110,6 +436,208 @@
           }
         ],
         "Interactions": []
+      },
+      {
+        "Name": "home",
+        "Width": 300,
+        "Height": 80,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "homeIcon",
+            "X": 7,
+            "Y": 7,
+            "Width": 67,
+            "Height": 67,
+            "RelativeFilename": "home_icon.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "homeText",
+            "X": 120,
+            "Y": 26,
+            "Width": 80,
+            "Height": 34,
+            "TextId": "home",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "HomeInteraction",
+            "Trigger": {
+              "Type": "TriggerWhen",
+              "ActionCustomTypeName": "Call home GoToHomeScreen"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "HomeScreen"
+            }
+          }
+        ],
+        "CustomActions": [
+          {
+            "Name": "GoToHomeScreen"
+          }
+        ]
+      },
+      {
+        "Name": "sensors",
+        "Width": 300,
+        "Height": 80,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "sensorsIcon",
+            "Width": 80,
+            "Height": 80,
+            "RelativeFilename": "sensors_icon.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "sensorsText",
+            "X": 120,
+            "Y": 26,
+            "Width": 110,
+            "Height": 34,
+            "TextId": "sensors",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "SensorsInteraction",
+            "Trigger": {
+              "Type": "TriggerWhen",
+              "ActionCustomTypeName": "Call sensors GoToSensorsScreen"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "SensorsScreen"
+            }
+          }
+        ],
+        "CustomActions": [
+          {
+            "Name": "GoToSensorsScreen"
+          }
+        ]
+      },
+      {
+        "Name": "events",
+        "Width": 300,
+        "Height": 80,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "eventsIcon",
+            "X": 4,
+            "Y": 4,
+            "Width": 72,
+            "Height": 72,
+            "RelativeFilename": "bell_icon.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "eventsText",
+            "X": 120,
+            "Y": 26,
+            "Width": 92,
+            "Height": 34,
+            "TextId": "events",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "EventsInteraction",
+            "Trigger": {
+              "Type": "TriggerWhen",
+              "ActionCustomTypeName": "Call events GoToEventsScreen"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "EventsScreen"
+            }
+          }
+        ],
+        "CustomActions": [
+          {
+            "Name": "GoToEventsScreen"
+          }
+        ]
+      },
+      {
+        "Name": "settings",
+        "Width": 300,
+        "Height": 80,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "settingsIcon",
+            "X": 7,
+            "Y": 7,
+            "Width": 67,
+            "Height": 67,
+            "RelativeFilename": "settings_icon.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "settingsText",
+            "X": 120,
+            "Y": 26,
+            "Width": 114,
+            "Height": 34,
+            "TextId": "settings",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "SettingsInteraction",
+            "Trigger": {
+              "Type": "TriggerWhen",
+              "ActionCustomTypeName": "Call settings GoToSettingsScreen"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "SettingsScreen"
+            }
+          }
+        ],
+        "CustomActions": [
+          {
+            "Name": "GoToSettingsScreen"
+          }
+        ]
       }
     ],
     "Name": "Dyploma",
@@ -118,7 +646,7 @@
       "Height": 480
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "Screen1",
+    "StartupScreenName": "MenuScreen",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",

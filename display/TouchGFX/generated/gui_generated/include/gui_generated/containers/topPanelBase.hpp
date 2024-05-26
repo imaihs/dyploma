@@ -34,6 +34,14 @@ protected:
     touchgfx::Image conn3;
     touchgfx::Image conn4;
 
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TIMEBUFFER1_SIZE = 4;
+    touchgfx::Unicode::UnicodeChar timeBuffer1[TIMEBUFFER1_SIZE];
+    static const uint16_t TIMEBUFFER2_SIZE = 4;
+    touchgfx::Unicode::UnicodeChar timeBuffer2[TIMEBUFFER2_SIZE];
+
 private:
 
 };

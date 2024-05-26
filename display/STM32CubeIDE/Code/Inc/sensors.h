@@ -4,19 +4,19 @@
 struct temperature
 {
     int temp;
-    uint8_t temp_float;
+    unsigned temp_float;
 };
 
 struct humidity
 {
     int hum;
-    uint8_t hum_float;
+    unsigned hum_float;
 };
 
 struct pressure
 {
     int pres;
-    uint8_t pres_float;
+    unsigned pres_float;
 };
 
 struct sensors
@@ -25,5 +25,7 @@ struct sensors
     struct humidity h;
     struct pressure p;
 };
+
+struct sensors sensors_get_data(void);
 
 #endif // SENSORS_H

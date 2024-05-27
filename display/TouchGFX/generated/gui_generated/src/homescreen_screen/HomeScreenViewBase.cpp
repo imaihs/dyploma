@@ -3,7 +3,7 @@
 /*********************************************************************************/
 #include <gui_generated/homescreen_screen/HomeScreenViewBase.hpp>
 #include <touchgfx/Color.hpp>
-#include <images/BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 HomeScreenViewBase::HomeScreenViewBase() :
     flexButtonCallback(this, &HomeScreenViewBase::flexButtonCallbackHandler)
@@ -12,14 +12,29 @@ HomeScreenViewBase::HomeScreenViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    topPanel1.setXY(0, 0);
-    add(topPanel1);
+    background.setBoxWithBorderPosition(0, 0, 800, 480);
+    background.setBorderSize(5);
+    background.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0));
+    background.setAction(flexButtonCallback);
+    background.setPosition(0, 0, 800, 480);
+    add(background);
 
-    goBack.setBitmaps(Bitmap(BITMAP_BACK_ICON_ID), Bitmap(BITMAP_BACK_ICON_ID));
-    goBack.setBitmapXY(0, 0);
-    goBack.setAction(flexButtonCallback);
-    goBack.setPosition(25, 223, 50, 35);
-    add(goBack);
+    date.setXY(232, 289);
+    date.setColor(touchgfx::Color::getColorFromRGB(248, 225, 164));
+    date.setLinespacing(0);
+    Unicode::snprintf(dateBuffer, DATE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_V1K4).getText());
+    date.setWildcard(dateBuffer);
+    date.resizeToCurrentText();
+    date.setTypedText(touchgfx::TypedText(T_DATE));
+    add(date);
+
+    time.setPosition(136, 83, 529, 170);
+    time.setColor(touchgfx::Color::getColorFromRGB(248, 225, 164));
+    time.setTypedText(touchgfx::TypedText(T___SINGLEUSE_6L09));
+    time.displayLeadingZeroForHourIndicator(true);
+    time.setDisplayMode(touchgfx::DigitalClock::DISPLAY_24_HOUR_NO_SECONDS);
+    time.setTime24Hour(17, 5, 0);
+    add(time);
 }
 
 HomeScreenViewBase::~HomeScreenViewBase()
@@ -29,16 +44,16 @@ HomeScreenViewBase::~HomeScreenViewBase()
 
 void HomeScreenViewBase::setupScreen()
 {
-    topPanel1.initialize();
+
 }
 
 void HomeScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
 {
-    if (&src == &goBack)
+    if (&src == &background)
     {
-        //GoBackInteraction
-        //When goBack clicked change screen to MenuScreen
-        //Go to MenuScreen with no screen transition
-        application().gotoMenuScreenScreenNoTransition();
+        //GoMenuInteraction
+        //When background clicked change screen to MenuScreen
+        //Go to MenuScreen with screen transition towards North
+        application().gotoMenuScreenScreenSlideTransitionNorth();
     }
 }

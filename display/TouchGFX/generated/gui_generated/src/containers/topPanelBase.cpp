@@ -3,27 +3,16 @@
 /*********************************************************************************/
 #include <gui_generated/containers/topPanelBase.hpp>
 #include <touchgfx/Color.hpp>
-#include <texts/TextKeysAndLanguages.hpp>
 #include <images/BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 topPanelBase::topPanelBase()
 {
     setWidth(800);
     setHeight(75);
     box1.setPosition(0, 0, 800, 75);
-    box1.setColor(touchgfx::Color::getColorFromRGB(30, 30, 30));
+    box1.setColor(touchgfx::Color::getColorFromRGB(26, 24, 20));
     add(box1);
-
-    time.setXY(22, 20);
-    time.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    time.setLinespacing(0);
-    touchgfx::Unicode::snprintf(timeBuffer1, TIMEBUFFER1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_H8KO).getText());
-    time.setWildcard1(timeBuffer1);
-    touchgfx::Unicode::snprintf(timeBuffer2, TIMEBUFFER2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_9M8N).getText());
-    time.setWildcard2(timeBuffer2);
-    time.resizeToCurrentText();
-    time.setTypedText(touchgfx::TypedText(T_TIME));
-    add(time);
 
     ok.setXY(371, 13);
     ok.setBitmap(touchgfx::Bitmap(BITMAP_OK_ICON_ID));
@@ -52,6 +41,14 @@ topPanelBase::topPanelBase()
     conn4.setXY(740, 16);
     conn4.setBitmap(touchgfx::Bitmap(BITMAP_CONN4_ICON_ID));
     add(conn4);
+
+    time.setPosition(0, 21, 121, 33);
+    time.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    time.setTypedText(touchgfx::TypedText(T___SINGLEUSE_QSJT));
+    time.displayLeadingZeroForHourIndicator(true);
+    time.setDisplayMode(touchgfx::DigitalClock::DISPLAY_24_HOUR_NO_SECONDS);
+    time.setTime24Hour(17, 5, 0);
+    add(time);
 }
 
 topPanelBase::~topPanelBase()

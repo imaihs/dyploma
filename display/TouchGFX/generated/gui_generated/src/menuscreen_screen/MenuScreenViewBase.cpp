@@ -3,27 +3,54 @@
 /*********************************************************************************/
 #include <gui_generated/menuscreen_screen/MenuScreenViewBase.hpp>
 #include <touchgfx/Color.hpp>
+#include <images/BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
-MenuScreenViewBase::MenuScreenViewBase()
+MenuScreenViewBase::MenuScreenViewBase() :
+    flexButtonCallback(this, &MenuScreenViewBase::flexButtonCallbackHandler)
 {
     __background.setPosition(0, 0, 800, 480);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    topPanel1.setXY(0, 0);
-    add(topPanel1);
+    settingsButton.setIconBitmaps(Bitmap(BITMAP_SETTINGS_ICON_ID), Bitmap(BITMAP_SETTINGS_ICON_ID));
+    settingsButton.setIconXY(7, 7);
+    settingsButton.setText(TypedText(T_SETTINGS));
+    settingsButton.setTextPosition(115, 20, 300, 80);
+    settingsButton.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(130, 130, 130));
+    settingsButton.setAction(flexButtonCallback);
+    settingsButton.setPosition(425, 280, 300, 80);
+    add(settingsButton);
 
-    homeButton.setXY(75, 160);
-    add(homeButton);
-
-    sensorsButton.setXY(425, 160);
-    add(sensorsButton);
-
-    eventsButton.setXY(75, 280);
+    eventsButton.setIconBitmaps(Bitmap(BITMAP_BELL_ICON_ID), Bitmap(BITMAP_BELL_ICON_ID));
+    eventsButton.setIconXY(4, 4);
+    eventsButton.setText(TypedText(T_EVENTS));
+    eventsButton.setTextPosition(115, 20, 300, 80);
+    eventsButton.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(130, 130, 130));
+    eventsButton.setAction(flexButtonCallback);
+    eventsButton.setPosition(75, 280, 300, 80);
     add(eventsButton);
 
-    settingsButton.setXY(425, 280);
-    add(settingsButton);
+    sensorsButton.setIconBitmaps(Bitmap(BITMAP_SENSORS_ICON_ID), Bitmap(BITMAP_SENSORS_ICON_ID));
+    sensorsButton.setIconXY(0, 0);
+    sensorsButton.setText(TypedText(T_SENSORS));
+    sensorsButton.setTextPosition(115, 20, 300, 80);
+    sensorsButton.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(130, 130, 130));
+    sensorsButton.setAction(flexButtonCallback);
+    sensorsButton.setPosition(425, 160, 300, 80);
+    add(sensorsButton);
+
+    homeButton.setIconBitmaps(Bitmap(BITMAP_HOME_ICON_ID), Bitmap(BITMAP_HOME_ICON_ID));
+    homeButton.setIconXY(7, 7);
+    homeButton.setText(TypedText(T_HOME));
+    homeButton.setTextPosition(115, 20, 300, 80);
+    homeButton.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(130, 130, 130));
+    homeButton.setAction(flexButtonCallback);
+    homeButton.setPosition(75, 160, 300, 80);
+    add(homeButton);
+
+    topPanel1.setXY(0, 0);
+    add(topPanel1);
 }
 
 MenuScreenViewBase::~MenuScreenViewBase()
@@ -34,8 +61,36 @@ MenuScreenViewBase::~MenuScreenViewBase()
 void MenuScreenViewBase::setupScreen()
 {
     topPanel1.initialize();
-    homeButton.initialize();
-    sensorsButton.initialize();
-    eventsButton.initialize();
-    settingsButton.initialize();
+}
+
+void MenuScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
+{
+    if (&src == &sensorsButton)
+    {
+        //GoSensorsInteraction
+        //When sensorsButton clicked change screen to SensorsScreen
+        //Go to SensorsScreen with screen transition towards East
+        application().gotoSensorsScreenScreenSlideTransitionEast();
+    }
+    if (&src == &homeButton)
+    {
+        //GoHomeInteraction
+        //When homeButton clicked change screen to HomeScreen
+        //Go to HomeScreen with screen transition towards South
+        application().gotoHomeScreenScreenSlideTransitionSouth();
+    }
+    if (&src == &eventsButton)
+    {
+        //GoEventsInteraction
+        //When eventsButton clicked change screen to EventsScreen
+        //Go to EventsScreen with screen transition towards East
+        application().gotoEventsScreenScreenSlideTransitionEast();
+    }
+    if (&src == &settingsButton)
+    {
+        //GoSettingsInteraction
+        //When settingsButton clicked change screen to SettingsScreen
+        //Go to SettingsScreen with screen transition towards East
+        application().gotoSettingsScreenScreenSlideTransitionEast();
+    }
 }

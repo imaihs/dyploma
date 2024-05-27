@@ -8,8 +8,9 @@
 #include <mvp/View.hpp>
 #include <gui/homescreen_screen/HomeScreenPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <gui/containers/topPanel.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/containers/clock/DigitalClock.hpp>
 
 class HomeScreenViewBase : public touchgfx::View<HomeScreenPresenter>
 {
@@ -27,8 +28,15 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    topPanel topPanel1;
-    touchgfx::ImageButtonStyle< touchgfx::ClickButtonTrigger >  goBack;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  background;
+    touchgfx::TextAreaWithOneWildcard date;
+    touchgfx::DigitalClock time;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t DATE_SIZE = 50;
+    touchgfx::Unicode::UnicodeChar dateBuffer[DATE_SIZE];
 
 private:
 

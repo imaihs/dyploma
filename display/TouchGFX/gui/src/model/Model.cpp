@@ -9,12 +9,12 @@ extern "C" {
 
 Model::Model() : 
         modelListener(0),
-        temperature(20),
-        temperatureFloat(0),
-        humidity(20),
-        humidityFloat(0),
-        pressure(20),
-        pressureFloat(0)
+        temperature(21),
+        temperatureFloat(3),
+        humidity(46),
+        humidityFloat(8),
+        pressure(1057),
+        pressureFloat(9)
 {
 
 }

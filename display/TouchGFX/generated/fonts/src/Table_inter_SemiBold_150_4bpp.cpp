@@ -4,7 +4,22 @@
 
 FONT_TABLE_LOCATION_FLASH_PRAGMA
 KEEP extern const touchgfx::GlyphNode glyphs_inter_SemiBold_150_4bpp[] FONT_TABLE_LOCATION_FLASH_ATTRIBUTE = {
-    {     0, 0x003F,  70, 112, 111,   5,  82,   0,   0, 0x00 } // uni003F
+    {     0, 0x0020,   0,   0,   0,   0,  37,   0,   0, 0x00 }, // uni0020
+    {     0, 0x0030,  85, 113, 111,   8, 100,   0,   1, 0x00 }, // uni0030
+    {  4859, 0x0031,  47, 110, 110,   8,  72,   1,   2, 0x00 }, // uni0031
+    {  7499, 0x0032,  76, 111, 111,   9,  93,   0,   0, 0x00 }, // uni0032
+    { 11717, 0x0033,  82, 113, 112,   8,  98,   3,   2, 0x00 }, // uni0033
+    { 16350, 0x0034,  86, 110, 109,   7, 100,   5,   2, 0x00 }, // uni0034
+    { 21080, 0x0035,  77, 111, 110,  10,  95,   7,   1, 0x00 }, // uni0035
+    { 25409, 0x0036,  81, 113, 111,   8,  97,   8,   1, 0x00 }, // uni0036
+    { 30042, 0x0037,  75, 110, 109,   6,  88,   9,   3, 0x00 }, // uni0037
+    { 34222, 0x0038,  82, 112, 111,   7,  97,  12,   1, 0x00 }, // uni0038
+    { 38814, 0x0039,  82, 113, 112,   8,  97,  13,   1, 0x00 }, // uni0039
+    { 43447, 0x003A,  24,  82,  81,  10,  44,  14,   1, 0x00 }, // uni003A
+    { 44431, 0x003F,  70, 112, 111,   5,  82,  15,   1, 0x00 }, // uni003F
+    { 48351, 0x0041, 102, 110, 110,   3, 109,  16,   3, 0x00 }, // uni0041
+    { 53961, 0x004D, 116, 110, 110,  10, 136,   0,   0, 0x00 }, // uni004D
+    { 60341, 0x0050,  81, 110, 110,  10,  97,   0,   0, 0x00 }  // uni0050
 };
 
 // inter_SemiBold_150_4bpp
@@ -22,6 +37,6 @@ touchgfx::GeneratedFont& getFont_inter_SemiBold_150_4bpp();
 
 touchgfx::GeneratedFont& getFont_inter_SemiBold_150_4bpp()
 {
-    static touchgfx::GeneratedFont inter_SemiBold_150_4bpp(glyphs_inter_SemiBold_150_4bpp, 1, 151, 150, 0, 0, 4, 1, 0, 0, unicodes_inter_SemiBold_150_4bpp, kerning_inter_SemiBold_150_4bpp, 63, 0, 0, 0);
+    static touchgfx::GeneratedFont inter_SemiBold_150_4bpp(glyphs_inter_SemiBold_150_4bpp, 16, 152, 150, 0, 0, 4, 1, 0, 0, unicodes_inter_SemiBold_150_4bpp, kerning_inter_SemiBold_150_4bpp, 63, 0, 0, 0);
     return inter_SemiBold_150_4bpp;
 }

@@ -8,12 +8,8 @@
 #include <mvp/View.hpp>
 #include <gui/menuscreen_screen/MenuScreenPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
 #include <gui/containers/topPanel.hpp>
-#include <gui/containers/home.hpp>
-#include <touchgfx/mixins/ClickListener.hpp>
-#include <gui/containers/sensors.hpp>
-#include <gui/containers/events.hpp>
-#include <gui/containers/settings.hpp>
 
 class MenuScreenViewBase : public touchgfx::View<MenuScreenPresenter>
 {
@@ -31,13 +27,23 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
+    touchgfx::TextButtonStyle< touchgfx::IconButtonStyle< touchgfx::ClickButtonTrigger >  >  settingsButton;
+    touchgfx::TextButtonStyle< touchgfx::IconButtonStyle< touchgfx::ClickButtonTrigger >  >  eventsButton;
+    touchgfx::TextButtonStyle< touchgfx::IconButtonStyle< touchgfx::ClickButtonTrigger >  >  sensorsButton;
+    touchgfx::TextButtonStyle< touchgfx::IconButtonStyle< touchgfx::ClickButtonTrigger >  >  homeButton;
     topPanel topPanel1;
-    touchgfx::ClickListener< home > homeButton;
-    touchgfx::ClickListener< sensors > sensorsButton;
-    touchgfx::ClickListener< events > eventsButton;
-    touchgfx::ClickListener< settings > settingsButton;
 
 private:
+
+    /*
+     * Callback Declarations
+     */
+    touchgfx::Callback<MenuScreenViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
+
+    /*
+     * Callback Handler Declarations
+     */
+    void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
 
 };
 

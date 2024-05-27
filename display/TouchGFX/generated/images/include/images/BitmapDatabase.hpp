@@ -14,12 +14,13 @@ const uint16_t BITMAP_CONN3_ICON_ID = 4;
 const uint16_t BITMAP_CONN4_ICON_ID = 5;
 const uint16_t BITMAP_HOME_ICON_ID = 6;
 const uint16_t BITMAP_HUMIDITY_ICON_ID = 7;
-const uint16_t BITMAP_OK_ICON_ID = 8;
-const uint16_t BITMAP_PRESSURE_ICON_ID = 9;
-const uint16_t BITMAP_SENSORS_ICON_ID = 10;
-const uint16_t BITMAP_SETTINGS_ICON_ID = 11;
-const uint16_t BITMAP_TEMPERATURE_ICON_ID = 12;
-const uint16_t BITMAP_WARNING_ICON_ID = 13;
+const uint16_t BITMAP_NO_EVENTS_ID = 8;
+const uint16_t BITMAP_OK_ICON_ID = 9;
+const uint16_t BITMAP_PRESSURE_ICON_ID = 10;
+const uint16_t BITMAP_SENSORS_ICON_ID = 11;
+const uint16_t BITMAP_SETTINGS_ICON_ID = 12;
+const uint16_t BITMAP_TEMPERATURE_ICON_ID = 13;
+const uint16_t BITMAP_WARNING_ICON_ID = 14;
 
 namespace BitmapDatabase
 {

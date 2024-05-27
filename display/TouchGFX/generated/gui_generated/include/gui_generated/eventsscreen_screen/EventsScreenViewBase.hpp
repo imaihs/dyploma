@@ -10,6 +10,7 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
 #include <gui/containers/topPanel.hpp>
+#include <touchgfx/widgets/Image.hpp>
 
 class EventsScreenViewBase : public touchgfx::View<EventsScreenPresenter>
 {
@@ -29,6 +30,7 @@ protected:
     touchgfx::Box __background;
     touchgfx::ImageButtonStyle< touchgfx::ClickButtonTrigger >  goBack;
     topPanel topPanel1;
+    touchgfx::Image image1;
 
 private:
 

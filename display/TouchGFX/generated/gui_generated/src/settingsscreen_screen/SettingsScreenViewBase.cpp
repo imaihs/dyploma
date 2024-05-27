@@ -38,7 +38,7 @@ void SettingsScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractB
     {
         //GoBackInteraction
         //When goBack clicked change screen to MenuScreen
-        //Go to MenuScreen with no screen transition
-        application().gotoMenuScreenScreenNoTransition();
+        //Go to MenuScreen with screen transition towards West
+        application().gotoMenuScreenScreenSlideTransitionWest();
     }
 }

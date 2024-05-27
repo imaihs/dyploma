@@ -17,22 +17,32 @@ public:
 
     virtual void changeToStartScreen()
     {
-        gotoMenuScreenScreenNoTransition();
+        gotoHomeScreenScreenNoTransition();
     }
 
     // MenuScreen
-    void gotoMenuScreenScreenNoTransition();
+    void gotoMenuScreenScreenSlideTransitionNorth();
+
+    void gotoMenuScreenScreenSlideTransitionWest();
 
     // HomeScreen
     void gotoHomeScreenScreenNoTransition();
 
+    void gotoHomeScreenScreenSlideTransitionSouth();
+
     // SensorsScreen
+    void gotoSensorsScreenScreenSlideTransitionEast();
+
     void gotoSensorsScreenScreenNoTransition();
 
     // EventsScreen
+    void gotoEventsScreenScreenSlideTransitionEast();
+
     void gotoEventsScreenScreenNoTransition();
 
     // SettingsScreen
+    void gotoSettingsScreenScreenSlideTransitionEast();
+
     void gotoSettingsScreenScreenNoTransition();
 
 protected:
@@ -41,18 +51,28 @@ protected:
     Model& model;
 
     // MenuScreen
-    void gotoMenuScreenScreenNoTransitionImpl();
+    void gotoMenuScreenScreenSlideTransitionNorthImpl();
+
+    void gotoMenuScreenScreenSlideTransitionWestImpl();
 
     // HomeScreen
     void gotoHomeScreenScreenNoTransitionImpl();
 
+    void gotoHomeScreenScreenSlideTransitionSouthImpl();
+
     // SensorsScreen
+    void gotoSensorsScreenScreenSlideTransitionEastImpl();
+
     void gotoSensorsScreenScreenNoTransitionImpl();
 
     // EventsScreen
+    void gotoEventsScreenScreenSlideTransitionEastImpl();
+
     void gotoEventsScreenScreenNoTransitionImpl();
 
     // SettingsScreen
+    void gotoSettingsScreenScreenSlideTransitionEastImpl();
+
     void gotoSettingsScreenScreenNoTransitionImpl();
 };
 

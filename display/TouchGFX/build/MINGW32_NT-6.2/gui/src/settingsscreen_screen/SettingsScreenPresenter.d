@@ -70,7 +70,9 @@ build/MINGW32_NT-6.2/gui/src/settingsscreen_screen/SettingsScreenPresenter.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
  gui/include/gui/containers/topPanel.hpp \
- generated/gui_generated/include/gui_generated/containers/topPanelBase.hpp
+ generated/gui_generated/include/gui_generated/containers/topPanelBase.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/DigitalClock.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp
 
 gui/include/gui/settingsscreen_screen/SettingsScreenView.hpp:
 
@@ -213,3 +215,7 @@ gui/include/gui/model/ModelListener.hpp:
 gui/include/gui/containers/topPanel.hpp:
 
 generated/gui_generated/include/gui_generated/containers/topPanelBase.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/DigitalClock.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp:

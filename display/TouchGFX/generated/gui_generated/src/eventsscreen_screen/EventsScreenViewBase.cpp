@@ -20,6 +20,10 @@ EventsScreenViewBase::EventsScreenViewBase() :
 
     topPanel1.setXY(0, 0);
     add(topPanel1);
+
+    image1.setXY(244, 212);
+    image1.setBitmap(touchgfx::Bitmap(BITMAP_NO_EVENTS_ID));
+    add(image1);
 }
 
 EventsScreenViewBase::~EventsScreenViewBase()
@@ -38,7 +42,7 @@ void EventsScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractBut
     {
         //GoBackInteraction
         //When goBack clicked change screen to MenuScreen
-        //Go to MenuScreen with no screen transition
-        application().gotoMenuScreenScreenNoTransition();
+        //Go to MenuScreen with screen transition towards West
+        application().gotoMenuScreenScreenSlideTransitionWest();
     }
 }

@@ -5,94 +5,285 @@
         "Name": "MenuScreen",
         "Components": [
           {
-            "Type": "CustomContainerInstance",
-            "Name": "topPanel1",
-            "Width": 800,
-            "Height": 75,
-            "CustomContainerDefinitionName": "topPanel"
-          },
-          {
-            "Type": "CustomContainerInstance",
-            "Name": "homeButton",
-            "X": 75,
-            "Y": 160,
-            "Width": 300,
-            "Height": 80,
-            "CustomContainerDefinitionName": "home",
-            "Clickable": true
-          },
-          {
-            "Type": "CustomContainerInstance",
-            "Name": "sensorsButton",
-            "X": 425,
-            "Y": 160,
-            "Width": 300,
-            "Height": 80,
-            "CustomContainerDefinitionName": "sensors",
-            "Clickable": true
-          },
-          {
-            "Type": "CustomContainerInstance",
-            "Name": "eventsButton",
-            "X": 75,
-            "Y": 280,
-            "Width": 300,
-            "Height": 80,
-            "CustomContainerDefinitionName": "events",
-            "Clickable": true
-          },
-          {
-            "Type": "CustomContainerInstance",
+            "Type": "FlexButton",
             "Name": "settingsButton",
             "X": 425,
             "Y": 280,
             "Width": 300,
             "Height": 80,
-            "CustomContainerDefinitionName": "settings",
-            "Clickable": true
-          }
-        ],
-        "Interactions": []
-      },
-      {
-        "Name": "HomeScreen",
-        "Components": [
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 115,
+                "Y": 20,
+                "TextId": "settings",
+                "TextRotation": "0",
+                "ColorReleased": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "ColorPressed": {
+                  "Red": 130,
+                  "Green": 130,
+                  "Blue": 130
+                }
+              },
+              {
+                "Type": "IconButtonStyle",
+                "X": 7,
+                "Y": 7,
+                "IconReleased": "settings_icon.png",
+                "IconPressed": "settings_icon.png"
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "eventsButton",
+            "X": 75,
+            "Y": 280,
+            "Width": 300,
+            "Height": 80,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 115,
+                "Y": 20,
+                "TextId": "events",
+                "TextRotation": "0",
+                "ColorReleased": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "ColorPressed": {
+                  "Red": 130,
+                  "Green": 130,
+                  "Blue": 130
+                }
+              },
+              {
+                "Type": "IconButtonStyle",
+                "X": 4,
+                "Y": 4,
+                "IconReleased": "bell_icon.png",
+                "IconPressed": "bell_icon.png"
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "sensorsButton",
+            "X": 425,
+            "Y": 160,
+            "Width": 300,
+            "Height": 80,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 115,
+                "Y": 20,
+                "TextId": "sensors",
+                "TextRotation": "0",
+                "ColorReleased": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "ColorPressed": {
+                  "Red": 130,
+                  "Green": 130,
+                  "Blue": 130
+                }
+              },
+              {
+                "Type": "IconButtonStyle",
+                "IconReleased": "sensors_icon.png",
+                "IconPressed": "sensors_icon.png"
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "homeButton",
+            "X": 75,
+            "Y": 160,
+            "Width": 300,
+            "Height": 80,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": 115,
+                "Y": 20,
+                "TextId": "home",
+                "TextRotation": "0",
+                "ColorReleased": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "ColorPressed": {
+                  "Red": 130,
+                  "Green": 130,
+                  "Blue": 130
+                }
+              },
+              {
+                "Type": "IconButtonStyle",
+                "X": 7,
+                "Y": 7,
+                "IconReleased": "home_icon.png",
+                "IconPressed": "home_icon.png"
+              }
+            ]
+          },
           {
             "Type": "CustomContainerInstance",
             "Name": "topPanel1",
             "Width": 800,
             "Height": 75,
             "CustomContainerDefinitionName": "topPanel"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "GoSensorsInteraction",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "sensorsButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "SensorsScreen"
+            }
           },
           {
+            "InteractionName": "GoHomeInteraction",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "homeButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "HomeScreen"
+            }
+          },
+          {
+            "InteractionName": "GoEventsInteraction",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "eventsButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "EventsScreen"
+            }
+          },
+          {
+            "InteractionName": "GoSettingsInteraction",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "settingsButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "SettingsScreen"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "HomeScreen",
+        "Components": [
+          {
             "Type": "FlexButton",
-            "Name": "goBack",
-            "X": 25,
-            "Y": 223,
-            "Width": 50,
-            "Height": 35,
+            "Name": "background",
+            "Width": 800,
+            "Height": 480,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
             "ButtonStyles": [
               {
-                "Type": "ImageButtonStyle",
-                "ImageReleased": "back_icon.png",
-                "ImagePressed": "back_icon.png"
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 800,
+                "Height": 480,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5
               }
             ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "date",
+            "X": 232,
+            "Y": 289,
+            "Width": 337,
+            "Height": 58,
+            "TextId": "date",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 248,
+              "Green": 225,
+              "Blue": 164
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_V1K4",
+              "UseBuffer": true,
+              "BufferSize": 50
+            }
+          },
+          {
+            "Type": "DigitalClock",
+            "Name": "time",
+            "X": 136,
+            "Y": 83,
+            "Width": 529,
+            "Height": 170,
+            "TextColor": {
+              "Red": 248,
+              "Green": 225,
+              "Blue": 164
+            },
+            "TextId": "__SingleUse_6L09",
+            "DisplayLeadingZeroForHourIndicator": true,
+            "InitialHour": 17,
+            "InitialMinute": 5
           }
         ],
         "Interactions": [
           {
-            "InteractionName": "GoBackInteraction",
+            "InteractionName": "GoMenuInteraction",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "goBack"
+              "TriggerComponent": "background"
             },
             "Action": {
               "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "North",
               "ActionComponent": "MenuScreen"
             }
           }
@@ -238,7 +429,8 @@
             },
             "Action": {
               "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
               "ActionComponent": "MenuScreen"
             }
           }
@@ -271,6 +463,15 @@
             "Width": 800,
             "Height": 75,
             "CustomContainerDefinitionName": "topPanel"
+          },
+          {
+            "Type": "Image",
+            "Name": "image1",
+            "X": 244,
+            "Y": 212,
+            "Width": 313,
+            "Height": 56,
+            "RelativeFilename": "No events.png"
           }
         ],
         "Interactions": [
@@ -282,7 +483,8 @@
             },
             "Action": {
               "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
               "ActionComponent": "MenuScreen"
             }
           }
@@ -326,7 +528,8 @@
             },
             "Action": {
               "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
               "ActionComponent": "MenuScreen"
             }
           }
@@ -345,35 +548,9 @@
             "Width": 800,
             "Height": 75,
             "Color": {
-              "Red": 30,
-              "Green": 30,
-              "Blue": 30
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "time",
-            "X": 22,
-            "Y": 20,
-            "Width": 80,
-            "Height": 34,
-            "TextId": "time",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true,
-            "Wildcard1": {
-              "TextId": "__SingleUse_H8KO",
-              "UseBuffer": true,
-              "BufferSize": 4
-            },
-            "Wildcard2": {
-              "TextId": "__SingleUse_9M8N",
-              "UseBuffer": true,
-              "BufferSize": 4
+              "Red": 26,
+              "Green": 24,
+              "Blue": 20
             }
           },
           {
@@ -433,6 +610,22 @@
             "Width": 41,
             "Height": 43,
             "RelativeFilename": "conn4_icon.png"
+          },
+          {
+            "Type": "DigitalClock",
+            "Name": "time",
+            "Y": 21,
+            "Width": 121,
+            "Height": 33,
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextId": "__SingleUse_QSJT",
+            "DisplayLeadingZeroForHourIndicator": true,
+            "InitialHour": 17,
+            "InitialMinute": 5
           }
         ],
         "Interactions": []
@@ -646,7 +839,7 @@
       "Height": 480
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "MenuScreen",
+    "StartupScreenName": "HomeScreen",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",

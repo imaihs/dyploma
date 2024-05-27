@@ -6,11 +6,23 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
-      <Text Id="__SingleUse_9M8N" Alignment="Left" TypographyId="InterSemiBold_48">
-        <Translation Language="GB">24</Translation>
+      <Text Id="__SingleUse_6L09" Alignment="Center" TypographyId="InterSemiBold_150">
+        <Translation Language="GB">&lt;&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_H8KO" Alignment="Left" TypographyId="InterSemiBold_48">
-        <Translation Language="GB">20</Translation>
+      <Text Id="__SingleUse_QSJT" Alignment="Center" TypographyId="InterSemiBold_28">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_V1K4" Alignment="Left" TypographyId="InterSemiBold_48">
+        <Translation Language="GB">Monday, 27.05</Translation>
+      </Text>
+      <Text Id="date" Alignment="Center" TypographyId="InterSemiBold_48">
+        <Translation Language="GB">&lt;date&gt;</Translation>
+      </Text>
+      <Text Id="big_time" Alignment="Center" TypographyId="InterSemiBold_150">
+        <Translation Language="GB">&lt;big_time&gt;</Translation>
+      </Text>
+      <Text Id="a" Alignment="Left" TypographyId="InterSemiBold_150">
+        <Translation Language="GB">&lt;big_time&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_35RA" Alignment="Left" TypographyId="InterSemiBold_48">
         <Translation Language="GB">9</Translation>
@@ -57,8 +69,8 @@
     </TextGroup>
   </Texts>
   <Typographies>
-    <Typography Id="InterSemiBold_28" Font="inter_SemiBold.ttf" Size="28" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="InterSemiBold_28" Font="inter_SemiBold.ttf" Size="28" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WidgetWildcardCharacters="0123456789 :APM" WildcardCharacterRanges="0-9" />
     <Typography Id="InterSemiBold_48" Font="inter_SemiBold.ttf" Size="48" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
-    <Typography Id="InterSemiBold_150" Font="inter_SemiBold.ttf" Size="150" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="InterSemiBold_150" Font="inter_SemiBold.ttf" Size="150" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WidgetWildcardCharacters="0123456789 :APM" />
   </Typographies>
 </TextDatabase>

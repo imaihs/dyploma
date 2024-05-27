@@ -7,8 +7,8 @@
 #include <gui/common/FrontendApplication.hpp>
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/containers/clock/DigitalClock.hpp>
 
 class topPanelBase : public touchgfx::Container
 {
@@ -26,21 +26,13 @@ protected:
      * Member Declarations
      */
     touchgfx::Box box1;
-    touchgfx::TextAreaWithTwoWildcards time;
     touchgfx::Image ok;
     touchgfx::Image warning;
     touchgfx::Image conn1;
     touchgfx::Image conn2;
     touchgfx::Image conn3;
     touchgfx::Image conn4;
-
-    /*
-     * Wildcard Buffers
-     */
-    static const uint16_t TIMEBUFFER1_SIZE = 4;
-    touchgfx::Unicode::UnicodeChar timeBuffer1[TIMEBUFFER1_SIZE];
-    static const uint16_t TIMEBUFFER2_SIZE = 4;
-    touchgfx::Unicode::UnicodeChar timeBuffer2[TIMEBUFFER2_SIZE];
+    touchgfx::DigitalClock time;
 
 private:
 

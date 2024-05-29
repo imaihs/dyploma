@@ -12,6 +12,8 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
     virtual void handleTickEvent();
+
+    void updateTime(unsigned hour, unsigned minute, unsigned second);
 protected:
     int currentTemp;
     unsigned currentTempFloat;

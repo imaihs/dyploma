@@ -10,6 +10,8 @@ public:
     virtual ~topPanel() {}
 
     virtual void initialize();
+    
+    void updateTime(unsigned hour, unsigned minute, unsigned second);
 protected:
 };
 

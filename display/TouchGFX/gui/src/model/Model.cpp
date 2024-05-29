@@ -4,6 +4,9 @@
 #ifndef SIMULATOR
 extern "C" {
 #include "sensors.h"
+
+extern unsigned flagOnePerSecond;
+extern RTC_TimeTypeDef GetRTC_Calendar();
 }
 #endif /*SIMULATOR*/
 
@@ -22,6 +25,11 @@ Model::Model() :
 void Model::tick()
 {
 #ifndef SIMULATOR
+    if(flagOnePerSecond != 0) {
+        flagOnePerSecond = 0;
+        RTC_TimeTypeDef sTime = GetRTC_Calendar();
+        modelListener->updateTime(sTime.Hours, sTime.Minutes, sTime.Seconds);
+    }
     struct sensors s = sensors_get_data();
     setTemperature(s.t.temp, s.t.temp_float);
     setHumidity(s.h.hum, s.h.hum_float);
@@ -75,4 +83,12 @@ int Model::getPressure() const
 unsigned Model::getPressureFloat() const
 {
     return pressureFloat;
+}
+
+void Model::GetTime()
+{
+#ifndef SIMULATOR
+    RTC_TimeTypeDef sTime = GetRTC_Calendar();
+    modelListener->updateTime(sTime.Hours, sTime.Minutes, sTime.Seconds);
+#endif /*SIMULATOR*/
 }

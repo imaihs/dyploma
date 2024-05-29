@@ -16,3 +16,13 @@ void SettingsScreenPresenter::deactivate()
 {
 
 }
+
+void SettingsScreenPresenter::updateTime(unsigned hour, unsigned minute, unsigned second)
+{
+    view.updateTime(hour, minute, second);
+}
+
+void SettingsScreenPresenter::UIGetTime(void)
+{
+    model->GetTime();
+}

@@ -14,6 +14,9 @@ public:
     {
         model = m;
     }
+
+    virtual void updateTime(unsigned hour, unsigned minute, unsigned second) {}
+    
 protected:
     Model* model;
 };

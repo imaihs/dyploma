@@ -11,6 +11,8 @@ public:
     virtual ~EventsScreenView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+
+    void updateTime(unsigned hour, unsigned minute, unsigned second);
 protected:
 };
 

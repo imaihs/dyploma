@@ -46,3 +46,13 @@ unsigned SensorsScreenPresenter::getPressureFloat() const
 {
     return model->getPressureFloat();
 }
+
+void SensorsScreenPresenter::updateTime(unsigned hour, unsigned minute, unsigned second)
+{
+    view.updateTime(hour, minute, second);
+}
+
+void SensorsScreenPresenter::UIGetTime(void)
+{
+    model->GetTime();
+}

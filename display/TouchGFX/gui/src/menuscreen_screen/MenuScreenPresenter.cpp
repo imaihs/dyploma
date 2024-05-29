@@ -16,3 +16,13 @@ void MenuScreenPresenter::deactivate()
 {
 
 }
+
+void MenuScreenPresenter::updateTime(unsigned hour, unsigned minute, unsigned second)
+{
+    view.updateTime(hour, minute, second);
+}
+
+void MenuScreenPresenter::UIGetTime(void)
+{
+    model->GetTime();
+}

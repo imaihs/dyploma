@@ -33,17 +33,11 @@ public:
     // SensorsScreen
     void gotoSensorsScreenScreenSlideTransitionEast();
 
-    void gotoSensorsScreenScreenNoTransition();
-
     // EventsScreen
     void gotoEventsScreenScreenSlideTransitionEast();
 
-    void gotoEventsScreenScreenNoTransition();
-
     // SettingsScreen
     void gotoSettingsScreenScreenSlideTransitionEast();
-
-    void gotoSettingsScreenScreenNoTransition();
 
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
@@ -63,17 +57,11 @@ protected:
     // SensorsScreen
     void gotoSensorsScreenScreenSlideTransitionEastImpl();
 
-    void gotoSensorsScreenScreenNoTransitionImpl();
-
     // EventsScreen
     void gotoEventsScreenScreenSlideTransitionEastImpl();
 
-    void gotoEventsScreenScreenNoTransitionImpl();
-
     // SettingsScreen
     void gotoSettingsScreenScreenSlideTransitionEastImpl();
-
-    void gotoSettingsScreenScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

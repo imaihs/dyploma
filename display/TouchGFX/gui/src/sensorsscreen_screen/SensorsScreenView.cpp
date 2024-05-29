@@ -12,6 +12,7 @@ SensorsScreenView::SensorsScreenView() :
 void SensorsScreenView::setupScreen()
 {
     SensorsScreenViewBase::setupScreen();
+    presenter->UIGetTime();
 }
 
 void SensorsScreenView::tearDownScreen()
@@ -63,4 +64,9 @@ void SensorsScreenView::handleTickEvent()
         presText.setWildcard2(presTextBuffer2);
         presText.invalidate();
     }
+}
+
+void SensorsScreenView::updateTime(unsigned hour, unsigned minute, unsigned second)
+{
+    topPanel1.updateTime(hour, minute, second);
 }

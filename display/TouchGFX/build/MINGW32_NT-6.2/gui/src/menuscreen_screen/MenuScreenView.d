@@ -72,8 +72,7 @@ build/MINGW32_NT-6.2/gui/src/menuscreen_screen/MenuScreenView.o: \
  gui/include/gui/containers/topPanel.hpp \
  generated/gui_generated/include/gui_generated/containers/topPanelBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/DigitalClock.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp \
- generated/gui_generated/include/gui_generated\containers\homeBase.hpp
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp
 
 gui/include/gui/menuscreen_screen/MenuScreenView.hpp:
 
@@ -220,5 +219,3 @@ generated/gui_generated/include/gui_generated/containers/topPanelBase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/DigitalClock.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp:
-
-generated/gui_generated/include/gui_generated\containers\homeBase.hpp:

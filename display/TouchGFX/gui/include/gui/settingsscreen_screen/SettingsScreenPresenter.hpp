@@ -27,6 +27,9 @@ public:
 
     virtual ~SettingsScreenPresenter() {}
 
+    void updateTime(unsigned hour, unsigned minute, unsigned second);
+    void UIGetTime(void);
+
 private:
     SettingsScreenPresenter();
 

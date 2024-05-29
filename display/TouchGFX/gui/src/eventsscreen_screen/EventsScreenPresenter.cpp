@@ -16,3 +16,13 @@ void EventsScreenPresenter::deactivate()
 {
 
 }
+
+void EventsScreenPresenter::updateTime(unsigned hour, unsigned minute, unsigned second)
+{
+    view.updateTime(hour, minute, second);
+}
+
+void EventsScreenPresenter::UIGetTime(void)
+{
+    model->GetTime();
+}

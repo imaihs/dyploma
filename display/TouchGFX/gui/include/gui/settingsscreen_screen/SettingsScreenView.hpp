@@ -11,6 +11,8 @@ public:
     virtual ~SettingsScreenView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+
+    void updateTime(unsigned hour, unsigned minute, unsigned second);
 protected:
 };
 

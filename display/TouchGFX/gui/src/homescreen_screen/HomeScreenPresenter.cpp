@@ -16,3 +16,13 @@ void HomeScreenPresenter::deactivate()
 {
 
 }
+
+void HomeScreenPresenter::updateTime(unsigned hour, unsigned minute, unsigned second)
+{
+    view.updateTime(hour, minute, second);
+}
+
+void HomeScreenPresenter::UIGetTime(void)
+{
+    model->GetTime();
+}

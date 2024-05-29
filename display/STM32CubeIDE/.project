@@ -590,26 +590,6 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/common/FrontendApplication.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/gui/events.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/containers/events.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/gui/home.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/containers/home.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/gui/sensors.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/containers/sensors.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/gui/settings.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/containers/settings.cpp</locationURI>
-		</link>
-		<link>
 			<name>Application/User/gui/topPanel.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/containers/topPanel.cpp</locationURI>
@@ -748,26 +728,6 @@
 			<name>Application/User/generated/FrontendApplicationBase.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/generated/eventsBase.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/containers/eventsBase.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/generated/homeBase.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/containers/homeBase.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/generated/sensorsBase.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/containers/sensorsBase.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/generated/settingsBase.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/containers/settingsBase.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/topPanelBase.cpp</name>

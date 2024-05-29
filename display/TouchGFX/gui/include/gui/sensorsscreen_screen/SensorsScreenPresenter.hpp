@@ -36,6 +36,9 @@ public:
     int getPressure() const;
     unsigned getPressureFloat() const;
 
+    void updateTime(unsigned hour, unsigned minute, unsigned second);
+    void UIGetTime(void);
+
 private:
     SensorsScreenPresenter();
 

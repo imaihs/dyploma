@@ -27,6 +27,9 @@ public:
 
     virtual ~EventsScreenPresenter() {}
 
+    void updateTime(unsigned hour, unsigned minute, unsigned second);
+    void UIGetTime(void);
+
 private:
     EventsScreenPresenter();
 

@@ -1,6 +1,10 @@
 #ifndef MODEL_HPP
 #define MODEL_HPP
 
+#ifndef SIMULATOR
+#include "main.h"
+#endif /*SIMULATOR*/
+
 class ModelListener;
 
 class Model
@@ -23,6 +27,8 @@ public:
     void setPressure(int pres, unsigned pres_float);
     int getPressure() const;
     unsigned getPressureFloat() const;
+
+    void GetTime(void);
 
 protected:
     ModelListener* modelListener;

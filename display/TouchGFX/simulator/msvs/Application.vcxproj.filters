@@ -244,6 +244,18 @@
     <Filter Include="Source Files\generated\gui_generated\eventsscreen_screen">
       <UniqueIdentifier>1C3C999D-63BC-4B23-94AE-CDD3AC4B474A</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\gui\timesettingsscreen_screen">
+      <UniqueIdentifier>650B2068-2FB6-0D45-EB24-A7956DC6F4E6</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\timesettingsscreen_screen">
+      <UniqueIdentifier>B3BB4499-3842-3BA9-5322-BF0CF27364E9</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\timesettingsscreen_screen">
+      <UniqueIdentifier>D1AC1F58-173C-6252-92EC-81FB4F47AABC</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\timesettingsscreen_screen">
+      <UniqueIdentifier>D05D1900-8C98-7281-AC73-D65C5C3FD1CB</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -326,6 +338,15 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\settingsscreen_screen\SettingsScreenViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\settingsscreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\timesettingsscreen_screen\TimeSettingsScreenPresenter.cpp">
+      <Filter>Source Files\gui\timesettingsscreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\timesettingsscreen_screen\TimeSettingsScreenView.cpp">
+      <Filter>Source Files\gui\timesettingsscreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\timesettingsscreen_screen\TimeSettingsScreenViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\timesettingsscreen_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -819,6 +840,15 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\settingsscreen_screen\SettingsScreenViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\settingsscreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\timesettingsscreen_screen\TimeSettingsScreenPresenter.hpp">
+      <Filter>Header Files\gui\timesettingsscreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\timesettingsscreen_screen\TimeSettingsScreenView.hpp">
+      <Filter>Header Files\gui\timesettingsscreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\timesettingsscreen_screen\TimeSettingsScreenViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\timesettingsscreen_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

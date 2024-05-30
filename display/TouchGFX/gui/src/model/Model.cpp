@@ -6,7 +6,10 @@ extern "C" {
 #include "sensors.h"
 
 extern unsigned flagOnePerSecond;
-extern RTC_TimeTypeDef GetRTC_Calendar();
+extern RTC_TimeTypeDef RTCGetTime();
+extern void RTCSetTime(unsigned hours, unsigned minutes, unsigned seconds);
+extern RTC_DateTypeDef RTCGetDate();
+extern void RTCSetDate(unsigned day, unsigned month, unsigned year);
 }
 #endif /*SIMULATOR*/
 
@@ -27,7 +30,7 @@ void Model::tick()
 #ifndef SIMULATOR
     if(flagOnePerSecond != 0) {
         flagOnePerSecond = 0;
-        RTC_TimeTypeDef sTime = GetRTC_Calendar();
+        RTC_TimeTypeDef sTime = RTCGetTime();
         modelListener->updateTime(sTime.Hours, sTime.Minutes, sTime.Seconds);
     }
     struct sensors s = sensors_get_data();
@@ -88,7 +91,31 @@ unsigned Model::getPressureFloat() const
 void Model::GetTime()
 {
 #ifndef SIMULATOR
-    RTC_TimeTypeDef sTime = GetRTC_Calendar();
+    RTC_TimeTypeDef sTime = RTCGetTime();
     modelListener->updateTime(sTime.Hours, sTime.Minutes, sTime.Seconds);
+    modelListener->peekTime(sTime.Hours, sTime.Minutes, sTime.Seconds);
+#endif /*SIMULATOR*/
+}
+
+void Model::SetTime(unsigned hours, unsigned minutes, unsigned seconds)
+{
+#ifndef SIMULATOR
+    RTCSetTime(hours, minutes, seconds);
+#endif /*SIMULATOR*/
+}
+
+void Model::GetDate()
+{
+#ifndef SIMULATOR
+    RTC_DateTypeDef sDate = RTCGetDate();
+    modelListener->updateDate(sDate.WeekDay, sDate.Date, sDate.Month, sDate.Year);
+    modelListener->peekDate(sDate.WeekDay, sDate.Date, sDate.Month, sDate.Year);
+#endif /*SIMULATOR*/
+}
+
+void Model::SetDate(unsigned day, unsigned month, unsigned year)
+{
+#ifndef SIMULATOR
+    RTCSetDate(day, month, year);
 #endif /*SIMULATOR*/
 }

@@ -9,16 +9,18 @@
 #include <touchgfx/Texts.hpp>
 #include <touchgfx/hal/HAL.hpp>
 #include <platform/driver/lcd/LCD16bpp.hpp>
-#include <gui/menuscreen_screen/MenuScreenView.hpp>
-#include <gui/menuscreen_screen/MenuScreenPresenter.hpp>
 #include <gui/homescreen_screen/HomeScreenView.hpp>
 #include <gui/homescreen_screen/HomeScreenPresenter.hpp>
+#include <gui/menuscreen_screen/MenuScreenView.hpp>
+#include <gui/menuscreen_screen/MenuScreenPresenter.hpp>
 #include <gui/sensorsscreen_screen/SensorsScreenView.hpp>
 #include <gui/sensorsscreen_screen/SensorsScreenPresenter.hpp>
 #include <gui/eventsscreen_screen/EventsScreenView.hpp>
 #include <gui/eventsscreen_screen/EventsScreenPresenter.hpp>
 #include <gui/settingsscreen_screen/SettingsScreenView.hpp>
 #include <gui/settingsscreen_screen/SettingsScreenPresenter.hpp>
+#include <gui/timesettingsscreen_screen/TimeSettingsScreenView.hpp>
+#include <gui/timesettingsscreen_screen/TimeSettingsScreenPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -37,30 +39,6 @@ FrontendApplicationBase::FrontendApplicationBase(Model& m, FrontendHeap& heap)
 /*
  * Screen Transition Declarations
  */
-
-// MenuScreen
-
-void FrontendApplicationBase::gotoMenuScreenScreenSlideTransitionNorth()
-{
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoMenuScreenScreenSlideTransitionNorthImpl);
-    pendingScreenTransitionCallback = &transitionCallback;
-}
-
-void FrontendApplicationBase::gotoMenuScreenScreenSlideTransitionNorthImpl()
-{
-    touchgfx::makeTransition<MenuScreenView, MenuScreenPresenter, touchgfx::SlideTransition<NORTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
-}
-
-void FrontendApplicationBase::gotoMenuScreenScreenSlideTransitionWest()
-{
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoMenuScreenScreenSlideTransitionWestImpl);
-    pendingScreenTransitionCallback = &transitionCallback;
-}
-
-void FrontendApplicationBase::gotoMenuScreenScreenSlideTransitionWestImpl()
-{
-    touchgfx::makeTransition<MenuScreenView, MenuScreenPresenter, touchgfx::SlideTransition<WEST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
-}
 
 // HomeScreen
 
@@ -84,6 +62,30 @@ void FrontendApplicationBase::gotoHomeScreenScreenSlideTransitionSouth()
 void FrontendApplicationBase::gotoHomeScreenScreenSlideTransitionSouthImpl()
 {
     touchgfx::makeTransition<HomeScreenView, HomeScreenPresenter, touchgfx::SlideTransition<SOUTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// MenuScreen
+
+void FrontendApplicationBase::gotoMenuScreenScreenSlideTransitionNorth()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoMenuScreenScreenSlideTransitionNorthImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoMenuScreenScreenSlideTransitionNorthImpl()
+{
+    touchgfx::makeTransition<MenuScreenView, MenuScreenPresenter, touchgfx::SlideTransition<NORTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplicationBase::gotoMenuScreenScreenSlideTransitionWest()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoMenuScreenScreenSlideTransitionWestImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoMenuScreenScreenSlideTransitionWestImpl()
+{
+    touchgfx::makeTransition<MenuScreenView, MenuScreenPresenter, touchgfx::SlideTransition<WEST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
 // SensorsScreen
@@ -123,4 +125,28 @@ void FrontendApplicationBase::gotoSettingsScreenScreenSlideTransitionEast()
 void FrontendApplicationBase::gotoSettingsScreenScreenSlideTransitionEastImpl()
 {
     touchgfx::makeTransition<SettingsScreenView, SettingsScreenPresenter, touchgfx::SlideTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplicationBase::gotoSettingsScreenScreenSlideTransitionWest()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoSettingsScreenScreenSlideTransitionWestImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoSettingsScreenScreenSlideTransitionWestImpl()
+{
+    touchgfx::makeTransition<SettingsScreenView, SettingsScreenPresenter, touchgfx::SlideTransition<WEST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// TimeSettingsScreen
+
+void FrontendApplicationBase::gotoTimeSettingsScreenScreenSlideTransitionEast()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoTimeSettingsScreenScreenSlideTransitionEastImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoTimeSettingsScreenScreenSlideTransitionEastImpl()
+{
+    touchgfx::makeTransition<TimeSettingsScreenView, TimeSettingsScreenPresenter, touchgfx::SlideTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

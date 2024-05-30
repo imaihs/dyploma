@@ -30,7 +30,7 @@ protected:
     touchgfx::Box __background;
     touchgfx::ImageButtonStyle< touchgfx::ClickButtonTrigger >  goBack;
     topPanel topPanel1;
-    touchgfx::Image image1;
+    touchgfx::Image no_events;
 
 private:
 

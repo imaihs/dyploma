@@ -48,10 +48,10 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/common/FrontendApplicationBase.
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SnapshotWidget.hpp \
  gui/include/gui/common/FrontendApplication.hpp \
- gui/include/gui/menuscreen_screen/MenuScreenView.hpp \
- generated/gui_generated/include/gui_generated/menuscreen_screen/MenuScreenViewBase.hpp \
+ gui/include/gui/homescreen_screen/HomeScreenView.hpp \
+ generated/gui_generated/include/gui_generated/homescreen_screen/HomeScreenViewBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
- gui/include/gui/menuscreen_screen/MenuScreenPresenter.hpp \
+ gui/include/gui/homescreen_screen/HomeScreenPresenter.hpp \
  gui/include/gui/model/ModelListener.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp \
@@ -76,13 +76,13 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/common/FrontendApplicationBase.
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
- gui/include/gui/containers/topPanel.hpp \
- generated/gui_generated/include/gui_generated/containers/topPanelBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/DigitalClock.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp \
- gui/include/gui/homescreen_screen/HomeScreenView.hpp \
- generated/gui_generated/include/gui_generated/homescreen_screen/HomeScreenViewBase.hpp \
- gui/include/gui/homescreen_screen/HomeScreenPresenter.hpp \
+ gui/include/gui/menuscreen_screen/MenuScreenView.hpp \
+ generated/gui_generated/include/gui_generated/menuscreen_screen/MenuScreenViewBase.hpp \
+ gui/include/gui/menuscreen_screen/MenuScreenPresenter.hpp \
+ gui/include/gui/containers/topPanel.hpp \
+ generated/gui_generated/include/gui_generated/containers/topPanelBase.hpp \
  gui/include/gui/sensorsscreen_screen/SensorsScreenView.hpp \
  generated/gui_generated/include/gui_generated/sensorsscreen_screen/SensorsScreenViewBase.hpp \
  gui/include/gui/sensorsscreen_screen/SensorsScreenPresenter.hpp \
@@ -92,6 +92,9 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/common/FrontendApplicationBase.
  gui/include/gui/settingsscreen_screen/SettingsScreenView.hpp \
  generated/gui_generated/include/gui_generated/settingsscreen_screen/SettingsScreenViewBase.hpp \
  gui/include/gui/settingsscreen_screen/SettingsScreenPresenter.hpp \
+ gui/include/gui/timesettingsscreen_screen/TimeSettingsScreenView.hpp \
+ generated/gui_generated/include/gui_generated/timesettingsscreen_screen/TimeSettingsScreenViewBase.hpp \
+ gui/include/gui/timesettingsscreen_screen/TimeSettingsScreenPresenter.hpp \
  generated/texts/include/texts/TextKeysAndLanguages.hpp \
  ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp
@@ -194,13 +197,13 @@ generated/gui_generated/include/gui_generated/common/FrontendHeapBase.hpp:
 
 gui/include/gui/common/FrontendApplication.hpp:
 
-gui/include/gui/menuscreen_screen/MenuScreenView.hpp:
+gui/include/gui/homescreen_screen/HomeScreenView.hpp:
 
-generated/gui_generated/include/gui_generated/menuscreen_screen/MenuScreenViewBase.hpp:
+generated/gui_generated/include/gui_generated/homescreen_screen/HomeScreenViewBase.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 
-gui/include/gui/menuscreen_screen/MenuScreenPresenter.hpp:
+gui/include/gui/homescreen_screen/HomeScreenPresenter.hpp:
 
 gui/include/gui/model/ModelListener.hpp:
 
@@ -250,19 +253,19 @@ gui/include/gui/model/ModelListener.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
 
-gui/include/gui/containers/topPanel.hpp:
-
-generated/gui_generated/include/gui_generated/containers/topPanelBase.hpp:
-
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/DigitalClock.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp:
 
-gui/include/gui/homescreen_screen/HomeScreenView.hpp:
+gui/include/gui/menuscreen_screen/MenuScreenView.hpp:
 
-generated/gui_generated/include/gui_generated/homescreen_screen/HomeScreenViewBase.hpp:
+generated/gui_generated/include/gui_generated/menuscreen_screen/MenuScreenViewBase.hpp:
 
-gui/include/gui/homescreen_screen/HomeScreenPresenter.hpp:
+gui/include/gui/menuscreen_screen/MenuScreenPresenter.hpp:
+
+gui/include/gui/containers/topPanel.hpp:
+
+generated/gui_generated/include/gui_generated/containers/topPanelBase.hpp:
 
 gui/include/gui/sensorsscreen_screen/SensorsScreenView.hpp:
 
@@ -281,6 +284,12 @@ gui/include/gui/settingsscreen_screen/SettingsScreenView.hpp:
 generated/gui_generated/include/gui_generated/settingsscreen_screen/SettingsScreenViewBase.hpp:
 
 gui/include/gui/settingsscreen_screen/SettingsScreenPresenter.hpp:
+
+gui/include/gui/timesettingsscreen_screen/TimeSettingsScreenView.hpp:
+
+generated/gui_generated/include/gui_generated/timesettingsscreen_screen/TimeSettingsScreenViewBase.hpp:
+
+gui/include/gui/timesettingsscreen_screen/TimeSettingsScreenPresenter.hpp:
 
 generated/texts/include/texts/TextKeysAndLanguages.hpp:
 

@@ -29,6 +29,9 @@ public:
     unsigned getPressureFloat() const;
 
     void GetTime(void);
+    void SetTime(unsigned hours, unsigned minutes, unsigned seconds);
+    void GetDate(void);
+    void SetDate(unsigned day, unsigned month, unsigned year);
 
 protected:
     ModelListener* modelListener;

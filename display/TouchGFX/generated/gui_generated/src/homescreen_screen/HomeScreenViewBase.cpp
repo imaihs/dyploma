@@ -19,20 +19,19 @@ HomeScreenViewBase::HomeScreenViewBase() :
     background.setPosition(0, 0, 800, 480);
     add(background);
 
-    date.setXY(232, 289);
+    date.setPosition(117, 297, 567, 58);
     date.setColor(touchgfx::Color::getColorFromRGB(248, 225, 164));
     date.setLinespacing(0);
     Unicode::snprintf(dateBuffer, DATE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_V1K4).getText());
     date.setWildcard(dateBuffer);
-    date.resizeToCurrentText();
     date.setTypedText(touchgfx::TypedText(T_DATE));
     add(date);
 
-    time.setPosition(136, 83, 529, 170);
+    time.setPosition(43, 83, 715, 170);
     time.setColor(touchgfx::Color::getColorFromRGB(248, 225, 164));
     time.setTypedText(touchgfx::TypedText(T___SINGLEUSE_6L09));
     time.displayLeadingZeroForHourIndicator(true);
-    time.setDisplayMode(touchgfx::DigitalClock::DISPLAY_24_HOUR_NO_SECONDS);
+    time.setDisplayMode(touchgfx::DigitalClock::DISPLAY_24_HOUR);
     time.setTime24Hour(17, 5, 0);
     add(time);
 }

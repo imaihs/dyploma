@@ -13,7 +13,7 @@ MenuScreenViewBase::MenuScreenViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    settingsButton.setIconBitmaps(Bitmap(BITMAP_SETTINGS_ICON_ID), Bitmap(BITMAP_SETTINGS_ICON_ID));
+    settingsButton.setIconBitmaps(Bitmap(BITMAP_SETTINGS_ICON_ID), Bitmap(BITMAP_SETTINGS_ICON_PRESSED_ID));
     settingsButton.setIconXY(7, 7);
     settingsButton.setText(TypedText(T_SETTINGS));
     settingsButton.setTextPosition(115, 20, 300, 80);
@@ -22,7 +22,7 @@ MenuScreenViewBase::MenuScreenViewBase() :
     settingsButton.setPosition(425, 280, 300, 80);
     add(settingsButton);
 
-    eventsButton.setIconBitmaps(Bitmap(BITMAP_BELL_ICON_ID), Bitmap(BITMAP_BELL_ICON_ID));
+    eventsButton.setIconBitmaps(Bitmap(BITMAP_BELL_ICON_ID), Bitmap(BITMAP_BELL_ICON_PRESSED_ID));
     eventsButton.setIconXY(4, 4);
     eventsButton.setText(TypedText(T_EVENTS));
     eventsButton.setTextPosition(115, 20, 300, 80);
@@ -31,7 +31,7 @@ MenuScreenViewBase::MenuScreenViewBase() :
     eventsButton.setPosition(75, 280, 300, 80);
     add(eventsButton);
 
-    sensorsButton.setIconBitmaps(Bitmap(BITMAP_SENSORS_ICON_ID), Bitmap(BITMAP_SENSORS_ICON_ID));
+    sensorsButton.setIconBitmaps(Bitmap(BITMAP_SENSORS_ICON_ID), Bitmap(BITMAP_SENSORS_ICON_PRESSED_ID));
     sensorsButton.setIconXY(0, 0);
     sensorsButton.setText(TypedText(T_SENSORS));
     sensorsButton.setTextPosition(115, 20, 300, 80);
@@ -40,7 +40,7 @@ MenuScreenViewBase::MenuScreenViewBase() :
     sensorsButton.setPosition(425, 160, 300, 80);
     add(sensorsButton);
 
-    homeButton.setIconBitmaps(Bitmap(BITMAP_HOME_ICON_ID), Bitmap(BITMAP_HOME_ICON_ID));
+    homeButton.setIconBitmaps(Bitmap(BITMAP_HOME_ICON_ID), Bitmap(BITMAP_HOME_ICON_PRESSED_ID));
     homeButton.setIconXY(7, 7);
     homeButton.setText(TypedText(T_HOME));
     homeButton.setTextPosition(115, 20, 300, 80);

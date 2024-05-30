@@ -7,20 +7,31 @@
 #include <touchgfx/Bitmap.hpp>
 
 const uint16_t BITMAP_BACK_ICON_ID = 0;
-const uint16_t BITMAP_BELL_ICON_ID = 1;
-const uint16_t BITMAP_CONN1_ICON_ID = 2;
-const uint16_t BITMAP_CONN2_ICON_ID = 3;
-const uint16_t BITMAP_CONN3_ICON_ID = 4;
-const uint16_t BITMAP_CONN4_ICON_ID = 5;
-const uint16_t BITMAP_HOME_ICON_ID = 6;
-const uint16_t BITMAP_HUMIDITY_ICON_ID = 7;
-const uint16_t BITMAP_NO_EVENTS_ID = 8;
-const uint16_t BITMAP_OK_ICON_ID = 9;
-const uint16_t BITMAP_PRESSURE_ICON_ID = 10;
-const uint16_t BITMAP_SENSORS_ICON_ID = 11;
-const uint16_t BITMAP_SETTINGS_ICON_ID = 12;
-const uint16_t BITMAP_TEMPERATURE_ICON_ID = 13;
-const uint16_t BITMAP_WARNING_ICON_ID = 14;
+const uint16_t BITMAP_BACK_ICON_PRESSED_ID = 1;
+const uint16_t BITMAP_BELL_ICON_ID = 2;
+const uint16_t BITMAP_BELL_ICON_PRESSED_ID = 3;
+const uint16_t BITMAP_CONN1_ICON_ID = 4;
+const uint16_t BITMAP_CONN2_ICON_ID = 5;
+const uint16_t BITMAP_CONN3_ICON_ID = 6;
+const uint16_t BITMAP_CONN4_ICON_ID = 7;
+const uint16_t BITMAP_DOWN_ICON_ID = 8;
+const uint16_t BITMAP_DOWN_ICON_PNG_PRESSED_ID = 9;
+const uint16_t BITMAP_HOME_ICON_ID = 10;
+const uint16_t BITMAP_HOME_ICON_PRESSED_ID = 11;
+const uint16_t BITMAP_HUMIDITY_ICON_ID = 12;
+const uint16_t BITMAP_NO_EVENTS_ID = 13;
+const uint16_t BITMAP_OK_ICON_ID = 14;
+const uint16_t BITMAP_PRESSURE_ICON_ID = 15;
+const uint16_t BITMAP_SENSORS_ICON_ID = 16;
+const uint16_t BITMAP_SENSORS_ICON_PRESSED_ID = 17;
+const uint16_t BITMAP_SETTINGS_ICON_ID = 18;
+const uint16_t BITMAP_SETTINGS_ICON_PRESSED_ID = 19;
+const uint16_t BITMAP_TEMPERATURE_ICON_ID = 20;
+const uint16_t BITMAP_TIME_ICON_ID = 21;
+const uint16_t BITMAP_TIME_ICON_PRESSED_ID = 22;
+const uint16_t BITMAP_UP_ICON_ID = 23;
+const uint16_t BITMAP_UP_ICON_PRESSED_ID = 24;
+const uint16_t BITMAP_WARNING_ICON_ID = 25;
 
 namespace BitmapDatabase
 {

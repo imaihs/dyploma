@@ -13,6 +13,7 @@ public:
     virtual void tearDownScreen();
     
     void updateTime(unsigned hour, unsigned minute, unsigned second);
+    void updateDate(unsigned week, unsigned day, unsigned month, unsigned year);
 protected:
 };
 

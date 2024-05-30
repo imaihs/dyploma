@@ -29,6 +29,7 @@ protected:
     touchgfx::Box __background;
     touchgfx::ImageButtonStyle< touchgfx::ClickButtonTrigger >  goBack;
     topPanel topPanel1;
+    touchgfx::TextButtonStyle< touchgfx::IconButtonStyle< touchgfx::ClickButtonTrigger >  >  time_button;
 
 private:
 

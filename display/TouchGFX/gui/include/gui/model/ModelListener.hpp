@@ -16,7 +16,10 @@ public:
     }
 
     virtual void updateTime(unsigned hour, unsigned minute, unsigned second) {}
-    
+    virtual void peekTime(unsigned hour, unsigned minute, unsigned second) {}
+    virtual void updateDate(unsigned week, unsigned day, unsigned month, unsigned year) {}
+    virtual void peekDate(unsigned week, unsigned day, unsigned month, unsigned year) {}
+
 protected:
     Model* model;
 };

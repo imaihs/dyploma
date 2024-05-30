@@ -13,7 +13,7 @@ SensorsScreenViewBase::SensorsScreenViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    goBack.setBitmaps(Bitmap(BITMAP_BACK_ICON_ID), Bitmap(BITMAP_BACK_ICON_ID));
+    goBack.setBitmaps(Bitmap(BITMAP_BACK_ICON_ID), Bitmap(BITMAP_BACK_ICON_PRESSED_ID));
     goBack.setBitmapXY(0, 0);
     goBack.setAction(flexButtonCallback);
     goBack.setPosition(25, 223, 50, 35);

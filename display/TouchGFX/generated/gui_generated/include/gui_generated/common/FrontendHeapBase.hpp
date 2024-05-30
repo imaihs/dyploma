@@ -14,16 +14,18 @@
 #include <gui/common/FrontendApplication.hpp>
 #include <gui/model/Model.hpp>
 
-#include <gui/menuscreen_screen/MenuScreenView.hpp>
-#include <gui/menuscreen_screen/MenuScreenPresenter.hpp>
 #include <gui/homescreen_screen/HomeScreenView.hpp>
 #include <gui/homescreen_screen/HomeScreenPresenter.hpp>
+#include <gui/menuscreen_screen/MenuScreenView.hpp>
+#include <gui/menuscreen_screen/MenuScreenPresenter.hpp>
 #include <gui/sensorsscreen_screen/SensorsScreenView.hpp>
 #include <gui/sensorsscreen_screen/SensorsScreenPresenter.hpp>
 #include <gui/eventsscreen_screen/EventsScreenView.hpp>
 #include <gui/eventsscreen_screen/EventsScreenPresenter.hpp>
 #include <gui/settingsscreen_screen/SettingsScreenView.hpp>
 #include <gui/settingsscreen_screen/SettingsScreenPresenter.hpp>
+#include <gui/timesettingsscreen_screen/TimeSettingsScreenView.hpp>
+#include <gui/timesettingsscreen_screen/TimeSettingsScreenPresenter.hpp>
 
 
 /**
@@ -46,12 +48,13 @@ public:
      * A list of all view types. Must end with meta::Nil.
      * @note All view types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< MenuScreenView,
-            touchgfx::meta::TypeList< HomeScreenView,
+    typedef touchgfx::meta::TypeList< HomeScreenView,
+            touchgfx::meta::TypeList< MenuScreenView,
             touchgfx::meta::TypeList< SensorsScreenView,
             touchgfx::meta::TypeList< EventsScreenView,
             touchgfx::meta::TypeList< SettingsScreenView,
-            touchgfx::meta::Nil > > > >
+            touchgfx::meta::TypeList< TimeSettingsScreenView,
+            touchgfx::meta::Nil > > > > >
             > GeneratedViewTypes;
 
     /**
@@ -63,12 +66,13 @@ public:
      * A list of all presenter types. Must end with meta::Nil.
      * @note All presenter types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< MenuScreenPresenter,
-            touchgfx::meta::TypeList< HomeScreenPresenter,
+    typedef touchgfx::meta::TypeList< HomeScreenPresenter,
+            touchgfx::meta::TypeList< MenuScreenPresenter,
             touchgfx::meta::TypeList< SensorsScreenPresenter,
             touchgfx::meta::TypeList< EventsScreenPresenter,
             touchgfx::meta::TypeList< SettingsScreenPresenter,
-            touchgfx::meta::Nil > > > >
+            touchgfx::meta::TypeList< TimeSettingsScreenPresenter,
+            touchgfx::meta::Nil > > > > >
             > GeneratedPresenterTypes;
 
     /**
@@ -81,9 +85,9 @@ public:
      * @note All transition types used in the application MUST be added to this list!
      */
     typedef touchgfx::meta::TypeList< touchgfx::NoTransition,
+            touchgfx::meta::TypeList< SlideTransition<NORTH>,
             touchgfx::meta::TypeList< SlideTransition<EAST>,
             touchgfx::meta::TypeList< SlideTransition<SOUTH>,
-            touchgfx::meta::TypeList< SlideTransition<NORTH>,
             touchgfx::meta::TypeList< SlideTransition<WEST>,
             touchgfx::meta::Nil > > > >
             > GeneratedTransitionTypes;

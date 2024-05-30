@@ -4,6 +4,7 @@
 #include <gui_generated/settingsscreen_screen/SettingsScreenViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <images/BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 SettingsScreenViewBase::SettingsScreenViewBase() :
     flexButtonCallback(this, &SettingsScreenViewBase::flexButtonCallbackHandler)
@@ -12,7 +13,7 @@ SettingsScreenViewBase::SettingsScreenViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    goBack.setBitmaps(Bitmap(BITMAP_BACK_ICON_ID), Bitmap(BITMAP_BACK_ICON_ID));
+    goBack.setBitmaps(Bitmap(BITMAP_BACK_ICON_ID), Bitmap(BITMAP_BACK_ICON_PRESSED_ID));
     goBack.setBitmapXY(0, 0);
     goBack.setAction(flexButtonCallback);
     goBack.setPosition(25, 223, 50, 35);
@@ -20,6 +21,15 @@ SettingsScreenViewBase::SettingsScreenViewBase() :
 
     topPanel1.setXY(0, 0);
     add(topPanel1);
+
+    time_button.setIconBitmaps(Bitmap(BITMAP_TIME_ICON_ID), Bitmap(BITMAP_TIME_ICON_PRESSED_ID));
+    time_button.setIconXY(0, 0);
+    time_button.setText(TypedText(T_TIME_DATE));
+    time_button.setTextPosition(125, 12, 300, 64);
+    time_button.setTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(130, 130, 130));
+    time_button.setAction(flexButtonCallback);
+    time_button.setPosition(250, 176, 300, 64);
+    add(time_button);
 }
 
 SettingsScreenViewBase::~SettingsScreenViewBase()
@@ -40,5 +50,12 @@ void SettingsScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractB
         //When goBack clicked change screen to MenuScreen
         //Go to MenuScreen with screen transition towards West
         application().gotoMenuScreenScreenSlideTransitionWest();
+    }
+    if (&src == &time_button)
+    {
+        //GoTimeSettingsInteraction
+        //When time_button clicked change screen to TimeSettingsScreen
+        //Go to TimeSettingsScreen with screen transition towards East
+        application().gotoTimeSettingsScreenScreenSlideTransitionEast();
     }
 }

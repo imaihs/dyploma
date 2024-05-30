@@ -153,6 +153,11 @@ static uint8_t QSPI_OutDrvStrengthCfg(QSPI_HandleTypeDef *hqspi);
 static uint8_t QSPI_WriteEnable(QSPI_HandleTypeDef *hqspi);
 static uint8_t QSPI_AutoPollingMemReady  (QSPI_HandleTypeDef *hqspi, uint32_t Timeout);
 static uint8_t BSP_QSPI_EnableMemoryMappedMode(QSPI_HandleTypeDef *hqspi);
+
+RTC_TimeTypeDef RTCGetTime(void);
+void RTCSetTime(unsigned hours, unsigned minutes, unsigned seconds);
+RTC_DateTypeDef RTCGetDate(void);
+void RTCSetDate(unsigned hours, unsigned minutes, unsigned seconds);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -287,6 +292,11 @@ void SystemClock_Config(void)
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
+  /** Configure LSE Drive Capability
+  */
+  HAL_PWR_EnableBkUpAccess();
+  __HAL_RCC_LSEDRIVE_CONFIG(RCC_LSEDRIVE_LOW);
+
   /** Configure the main internal regulator output voltage
   */
   __HAL_RCC_PWR_CLK_ENABLE();
@@ -295,9 +305,9 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_LSI|RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE|RCC_OSCILLATORTYPE_LSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
-  RCC_OscInitStruct.LSIState = RCC_LSI_ON;
+  RCC_OscInitStruct.LSEState = RCC_LSE_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
   RCC_OscInitStruct.PLL.PLLM = 25;
@@ -815,7 +825,7 @@ static void MX_RTC_Init(void)
   sDate.WeekDay = RTC_WEEKDAY_MONDAY;
   sDate.Month = RTC_MONTH_MAY;
   sDate.Date = 27;
-  sDate.Year = 0;
+  sDate.Year = 24;
   if (HAL_RTC_SetDate(&hrtc, &sDate, RTC_FORMAT_BIN) != HAL_OK)
   {
     Error_Handler();
@@ -1055,12 +1065,43 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 
-RTC_TimeTypeDef GetRTC_Calendar(void) {
+RTC_TimeTypeDef RTCGetTime(void) {
   RTC_TimeTypeDef sTime = {0};
   RTC_DateTypeDef sDate = {0};
   HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
   HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
   return sTime;
+}
+
+void RTCSetTime(unsigned hours, unsigned minutes, unsigned seconds) {
+  RTC_TimeTypeDef sTime = {0};
+  sTime.Hours = hours;
+  sTime.Minutes = minutes;
+  sTime.Seconds = seconds;
+  HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+}
+
+RTC_DateTypeDef RTCGetDate(void) {
+  RTC_TimeTypeDef sTime = {0};
+  RTC_DateTypeDef sDate = {0};
+  HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+  HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
+  return sDate;
+}
+
+void RTCSetDate(unsigned day, unsigned month, unsigned year) {
+  RTC_DateTypeDef sDate = {0};
+  sDate.Date = day;
+  sDate.Month = month;
+  sDate.Year = year;
+  unsigned weekday = 0;
+  const uint8_t list_mth[12] = {0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4};
+  if(month < 3){
+    year -= 1;
+  }
+  weekday = (unsigned)((year + (year/4) - (year/100) + (year/400) + list_mth[month-1] + day) % 7);
+  sDate.WeekDay = weekday;
+  HAL_RTC_SetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
 }
 
 void HAL_RTC_AlarmAEventCallback(RTC_HandleTypeDef *hrtc) {

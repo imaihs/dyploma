@@ -20,15 +20,15 @@ public:
         gotoHomeScreenScreenNoTransition();
     }
 
-    // MenuScreen
-    void gotoMenuScreenScreenSlideTransitionNorth();
-
-    void gotoMenuScreenScreenSlideTransitionWest();
-
     // HomeScreen
     void gotoHomeScreenScreenNoTransition();
 
     void gotoHomeScreenScreenSlideTransitionSouth();
+
+    // MenuScreen
+    void gotoMenuScreenScreenSlideTransitionNorth();
+
+    void gotoMenuScreenScreenSlideTransitionWest();
 
     // SensorsScreen
     void gotoSensorsScreenScreenSlideTransitionEast();
@@ -39,20 +39,25 @@ public:
     // SettingsScreen
     void gotoSettingsScreenScreenSlideTransitionEast();
 
+    void gotoSettingsScreenScreenSlideTransitionWest();
+
+    // TimeSettingsScreen
+    void gotoTimeSettingsScreenScreenSlideTransitionEast();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
     Model& model;
 
-    // MenuScreen
-    void gotoMenuScreenScreenSlideTransitionNorthImpl();
-
-    void gotoMenuScreenScreenSlideTransitionWestImpl();
-
     // HomeScreen
     void gotoHomeScreenScreenNoTransitionImpl();
 
     void gotoHomeScreenScreenSlideTransitionSouthImpl();
+
+    // MenuScreen
+    void gotoMenuScreenScreenSlideTransitionNorthImpl();
+
+    void gotoMenuScreenScreenSlideTransitionWestImpl();
 
     // SensorsScreen
     void gotoSensorsScreenScreenSlideTransitionEastImpl();
@@ -62,6 +67,11 @@ protected:
 
     // SettingsScreen
     void gotoSettingsScreenScreenSlideTransitionEastImpl();
+
+    void gotoSettingsScreenScreenSlideTransitionWestImpl();
+
+    // TimeSettingsScreen
+    void gotoTimeSettingsScreenScreenSlideTransitionEastImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

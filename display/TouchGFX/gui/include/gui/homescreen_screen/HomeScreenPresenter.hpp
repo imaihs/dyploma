@@ -29,6 +29,8 @@ public:
 
     void updateTime(unsigned hour, unsigned minute, unsigned second);
     void UIGetTime(void);
+    void updateDate(unsigned week, unsigned day, unsigned month, unsigned year);
+    void UIGetDate(void);
 
 private:
     HomeScreenPresenter();

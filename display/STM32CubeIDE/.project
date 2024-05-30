@@ -650,6 +650,16 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/gui/TimeSettingsScreenPresenter.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/timesettingsscreen_screen/TimeSettingsScreenPresenter.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/gui/TimeSettingsScreenView.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/timesettingsscreen_screen/TimeSettingsScreenView.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/ApplicationFontProvider.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/ApplicationFontProvider.cpp</locationURI>
@@ -760,6 +770,11 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/settingsscreen_screen/SettingsScreenViewBase.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/TimeSettingsScreenViewBase.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/timesettingsscreen_screen/TimeSettingsScreenViewBase.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/BitmapDatabase.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/BitmapDatabase.cpp</locationURI>
@@ -780,9 +795,19 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_back_icon.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_back_icon_pressed.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_back_icon_pressed.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_bell_icon.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_bell_icon.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_bell_icon_pressed.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_bell_icon_pressed.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_conn1_icon.cpp</name>
@@ -805,9 +830,24 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_conn4_icon.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_down_icon.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_down_icon.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_down_icon.png_pressed.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_down_icon.png_pressed.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_home_icon.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_home_icon.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_home_icon_pressed.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_home_icon_pressed.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_humidity_icon.cpp</name>
@@ -830,14 +870,44 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_sensors_icon.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_sensors_icon_pressed.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_sensors_icon_pressed.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_settings_icon.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_settings_icon.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_settings_icon_pressed.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_settings_icon_pressed.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_temperature_icon.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_temperature_icon.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_time_icon.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_time_icon.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_time_icon_pressed.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_time_icon_pressed.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_up_icon.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_up_icon.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_up_icon_pressed.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_up_icon_pressed.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_warning_icon.cpp</name>

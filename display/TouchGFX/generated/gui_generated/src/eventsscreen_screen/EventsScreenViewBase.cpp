@@ -12,7 +12,7 @@ EventsScreenViewBase::EventsScreenViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    goBack.setBitmaps(Bitmap(BITMAP_BACK_ICON_ID), Bitmap(BITMAP_BACK_ICON_ID));
+    goBack.setBitmaps(Bitmap(BITMAP_BACK_ICON_ID), Bitmap(BITMAP_BACK_ICON_PRESSED_ID));
     goBack.setBitmapXY(0, 0);
     goBack.setAction(flexButtonCallback);
     goBack.setPosition(25, 223, 50, 35);
@@ -21,9 +21,9 @@ EventsScreenViewBase::EventsScreenViewBase() :
     topPanel1.setXY(0, 0);
     add(topPanel1);
 
-    image1.setXY(244, 212);
-    image1.setBitmap(touchgfx::Bitmap(BITMAP_NO_EVENTS_ID));
-    add(image1);
+    no_events.setXY(244, 212);
+    no_events.setBitmap(touchgfx::Bitmap(BITMAP_NO_EVENTS_ID));
+    add(no_events);
 }
 
 EventsScreenViewBase::~EventsScreenViewBase()

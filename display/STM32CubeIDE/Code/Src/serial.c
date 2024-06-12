@@ -61,7 +61,6 @@ static void serial_task(void *argument)
     for (;;)
     {
         osSemaphoreAcquire(serial_rxcplt_sem, osWaitForever);
-//        LOG("%s here", __func__);
         usart_rx_check();
         osDelay(1);
     }
